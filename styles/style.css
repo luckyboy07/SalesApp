@@ -1,7 +1,50 @@
-body {
-  padding-top: 50px;
+.logoer {
+    width: 51px;
+    height: 51px;
+    margin-top: -15px;
+    margin-right: 15px;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+
+.navbar-custom .navbar-brand {
+    color: #F26822 !important;
+    display: flex !important;
+    font-size: 1.5em !important;
+}
+
+.headermenu {
+    text-transform: none !important;
+    font-weight: 300 !important;
+}
+
+.signUpbtn {
+    background: #F26822;
+    border: 0;
+    padding: 5px 25px;
+    border-radius: 2px;
+    margin-top: -4px;
+    outline: 0 !important
+}
+
+header .intro-text .intro-lead-in {
+    font-style: normal !important;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    header .intro-text {
+        padding-top: 215px !important;
+        padding-bottom: 200px;
+        font-size: 36px !important;
+        font-weight: 300 !important;
+        letter-spacing: 2px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1270px !important;
+    }
 }
