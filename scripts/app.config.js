@@ -2,21 +2,24 @@
     'use strict';
 
     angular.module('starter')
-        .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 'RestangularProvider','API_URL', 'API_VERSION',
+        .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 'RestangularProvider', 'API_URL', 'API_VERSION',
             function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, RestangularProvider, API_URL, API_VERSION) {
 
                 $locationProvider.html5Mode({ enabled: false, requireBase: false });
                 $locationProvider.hashPrefix("");
 
 
-                $urlRouterProvider.otherwise('/main');
+                $urlRouterProvider.otherwise('/dashboard');
 
                 $stateProvider
-                    .state('main', {
-                        url: '/main',
+                    .state('dashboard', {
+                        url: '/dashboard',
                         templateUrl: 'modules/main.html'
                     });
-
+                // .state('main.service', {
+                //     url: '/main/service',
+                //     templateUrl: 'modules/services/main.html'
+                // });
                 RestangularProvider.setBaseUrl(API_URL + API_VERSION);
 
             }

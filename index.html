@@ -9,13 +9,16 @@
     <link rel="icon" type="image/ico" href="../images/favicon.ico">
     <!-- LIBRARY -->
     <!-- build:css css/main.min.css -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="styles/style.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="styles/agency.min.css" rel="stylesheet" type="text/css" /> -->
     <!-- endbuild -->
+    <link href="css/agency.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body  id="page-top"  class="index">
     <!--
         *
         *
@@ -37,7 +40,8 @@
         -->
     <!-- ./wrapper -->
     <!-- build:js js/main.min.js -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
     <script src="bower_components/lodash/dist/lodash.min.js"></script>
     <script src="bower_components/async/dist/async.min.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
@@ -48,7 +52,8 @@
         *
         *-->
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script> -->
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
@@ -67,6 +72,7 @@
         *
         *-->
     <!-- build:js1 js/app.min.js -->
+    <script src="js/agency.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/app.config.js"></script>
     <script src="scripts/app.run.js"></script>
