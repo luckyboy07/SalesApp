@@ -1,7 +1,109 @@
-body {
-  padding-top: 50px;
+.logoer {
+    width: 51px;
+    height: 51px;
+    margin-top: -15px;
+    margin-right: 15px;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+
+.navbar-custom .navbar-brand {
+    color: #F26822 !important;
+    display: flex !important;
+    font-size: 1.5em !important;
+}
+
+.headermenu {
+    text-transform: none !important;
+    font-weight: 300 !important;
+}
+
+.signUpbtn {
+    background: #F26822;
+    border: 0;
+    padding: 5px 25px;
+    border-radius: 2px;
+    margin-top: -4px;
+    outline: 0 !important
+}
+
+header .intro-text .intro-lead-in {
+    font-style: normal !important;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    header .intro-text {
+        padding-top: 215px !important;
+        padding-bottom: 200px;
+        font-size: 36px !important;
+        font-weight: 300 !important;
+        letter-spacing: 2px !important;
+    }
+    header .intro-text .intro-lead-in {
+        margin-bottom: 50px !important;
+    }
+    section {
+        padding: 75px 0 !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1270px !important;
+    }
+}
+
+header {
+    background-image: url(../img/headerBg.png) !important;
+}
+
+.searchIcon {
+    margin-right: -40px;
+    color: #F26822;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.searcherr {
+    padding-left: 50px;
+    height: 45px;
+    border: 2px #F26822 solid;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.searcherr:focus {
+    border: 2px #F26822 solid;
+}
+
+.searchBtn {
+    background: #F26822;
+    border: 0;
+    font-size: 16px;
+    width: 140px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400 !important;
+}
+
+.styledIcon {
+    font-size: 21px;
+    color: #fff;
+    margin-top: 6px;
+}
+
+.headerCover {
+    background: rgba(242, 103, 53, 0.12);
+    width: 100%;
+    height: 550px;
+    position: absolute;
 }
