@@ -9,17 +9,17 @@
                 $locationProvider.hashPrefix("");
 
 
-                $urlRouterProvider.otherwise('/dashboard');
+                $urlRouterProvider.otherwise('/main/home');
 
                 $stateProvider
-                    .state('dashboard', {
-                        url: '/dashboard',
+                    .state('main', {
+                        url: '/main',
                         templateUrl: 'modules/main.html'
+                    })
+                    .state('main.home', {
+                        url: '/home',
+                        templateUrl: 'modules/home/home.html'
                     });
-                // .state('main.service', {
-                //     url: '/main/service',
-                //     templateUrl: 'modules/services/main.html'
-                // });
                 RestangularProvider.setBaseUrl(API_URL + API_VERSION);
 
             }
