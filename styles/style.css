@@ -1,3 +1,7 @@
+.navbar-fixed-top {
+    position: absolute !important;
+}
+
 .logoer {
     width: 51px;
     height: 51px;
@@ -106,4 +110,120 @@ h6 {
     width: 100%;
     height: 550px;
     position: absolute;
+}
+
+.dlapp {
+    background-image: url(../img/dlApp.png);
+    height: 510px;
+    margin-top: 50px;
+    background-size: 100% 510px;
+    background-repeat: no-repeat;
+}
+
+.text-muted {
+    color: #f26822 !important;
+    font-style: normal !important;
+}
+
+.textAppDl {
+    font-size: 19px;
+    text-align: left;
+    padding-left: 150px;
+    padding-right: 100px;
+    margin-top: -30px;
+}
+
+.dtext {
+    color: #F26822;
+    margin-top: 100px;
+    font-size: 15px;
+}
+
+.btn1 {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    margin-left: -5px;
+    outline: 0;
+}
+
+section#contact {
+    background-color: transparent !important;
+    background-image: url(../img/footerbg.png) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 500px;
+    padding: 0px !important;
+    margin-top: -50px !important;
+    height: 500px;
+}
+
+#letsthinkbig {
+    width: 550px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.81);
+    margin-top: 130px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+#letsthinkbig h2 {
+    color: rgba(242, 104, 34, 0.75);
+    font-size: 38px;
+}
+
+#letsthinkbig .incrser {
+    color: #F26822;
+    font-size: 29px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+#letsthinkbig button {
+    background: #F26822;
+    border: 0px;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#semiFooter {
+    background: #797876 !important;
+    margin-top: -24px !important;
+    padding-bottom: 40px !important;
+    padding-top: 10px !important;
+    color: #eaeaea;
+    line-height: 33px;
+}
+
+#semiFooter h4 {
+    text-transform: none;
+    margin-bottom: 15px !important;
+    font-size: 20px;
+}
+
+ul.social-buttons li a {
+    display: block;
+    background-color: #222;
+    height: 35px !important;
+    width: 35px !important;
+    border-radius: 100%;
+    font-size: 16px !important;
+    line-height: 36px !important;
+    color: #fff;
+    outline: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+footer {
+    padding: 8px 0 !important;
+    text-align: center;
+    background: #656460 !important;
+    color: #dedede;
 }
