@@ -9,14 +9,11 @@
                 $locationProvider.hashPrefix("");
 
 
-                $urlRouterProvider.otherwise('/main/home');
+                $urlRouterProvider.otherwise('/main/menu');
 
                 $stateProvider
 
-                    // .state('dashboard', {
-                    //     url: '/dashboard',
-                    //     templateUrl: 'modules/users/user.html'
-
+                    
                     .state('main', {
                         url: '/main',
                         templateUrl: 'modules/main.html'
@@ -24,6 +21,19 @@
                     .state('main.home', {
                         url: '/home',
                         templateUrl: 'modules/home/home.html'
+                    })
+                    .state('main.restolist', {
+                        url: '/restolist',
+                        templateUrl: 'modules/users/user.html',
+                        controller: 'listCtrl'
+                    })
+                    .state('main.orders', {
+                        url: '/orders',
+                        templateUrl: 'modules/orders/orders.html'
+                    })
+                    .state('main.menu', {
+                        url: '/menu',
+                        templateUrl: 'modules/menu/menu.html'
                     });
                 RestangularProvider.setBaseUrl(API_URL + API_VERSION);
 
