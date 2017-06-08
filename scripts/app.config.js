@@ -14,7 +14,7 @@
                 $stateProvider
                     .state('dashboard', {
                         url: '/dashboard',
-                        templateUrl: 'modules/main.html'
+                        templateUrl: 'modules/users/user.html'
                     });
                 // .state('main.service', {
                 //     url: '/main/service',
