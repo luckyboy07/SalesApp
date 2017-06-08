@@ -19,31 +19,30 @@
     function MainCtrl($scope, $uibModal) {
 
 
-
-
-        $uibModal.open({
-            animation: $ctrl.animationsEnabled,
-            ariaLabelledBy: 'modal-title-top',
-            ariaDescribedBy: 'modal-body-top',
-            templateUrl: '../modals/signupModal.html',
-            size: 'sm',
-            controller: function($scope) {
-                $scope.name = 'top';
+        $scope.dynamicPopover = {
+            templateUrl: 'myPopoverTemplate.html',
+            backdrop: 'static',
+            keyboard: false
+        };
+        $scope.openLoginModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'modules/modals/loginModal.html',
+                scope: $scope
+            });
+            $scope.cancel = function() {
+                modalInstance.dismiss('cancel');
             }
-        });
+        }
+        $scope.openSignupModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'modules/modals/signupModal.html',
+                scope: $scope
+            });
+            $scope.cancel = function() {
+                modalInstance.dismiss('cancel');
+            }
+        }
     };
-    angular.module('starter')
-        .controller('ModalInstanceCtrl', function($uibModalInstance) {
 
 
-            $ctrl.ok = function() {
-                $uibModalInstance.close($ctrl.selected.item);
-            };
-
-            $ctrl.cancel = function() {
-                $uibModalInstance.dismiss('cancel');
-            };
-        });
-
-
-};)();
+})()

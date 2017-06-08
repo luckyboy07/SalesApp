@@ -11,10 +11,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll headermenu" href="#team">Login</a>
+                    <a class="page-scroll headermenu" ng-click="openLoginModal()">Login</a>
                 </li>
                 <li>
-                    <a class="page-scroll headermenu" href="#contact">
+                    <a class="page-scroll headermenu" ng-click="openSignupModal()">
                         <button class="signUpbtn">Signup</button>
                     </a>
                 </li>
@@ -117,15 +117,15 @@
             <button class="btn1"><img src="img/Image 858.png" style="width: 120px;margin-left: 4px;"></button>
             <div style="text-align: center;">
                 <ul class="list-inline social-buttons" style="margin-left: -30px;margin-top: 35px;">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                    <li><a href="#" style="background-color: #3b5998"><i class="fa fa-facebook"></i></a>
                     </li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                    <li><a href="#" style="background-color: #55acee"><i class="fa fa-twitter"></i></a>
                     </li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                    <li><a href="#" style="background-color: #007bb5"><i class="fa fa-linkedin"></i></a>
                     </li>
-                    <li><a href="#"><i class="fa fa-google"></i></a>
+                    <li><a href="#" style="background-color: #dd4b39"><i class="fa fa-google"></i></a>
                     </li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a>
+                    <li><a href="#" style="background-color: #e95950"><i class="fa fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -152,4 +152,23 @@
         </div>
     </div>
 </footer>
+<!-- LOGIN -->
+<!-- LOGIN -->
+<!-- LOGIN -->
+<!-- <script type="text/ng-template" id="myPopoverTemplate.html" right-top>
+<div style="padding: 5px;
+    background: #F26822;
+    color: #fff;">Login</div>
+    <div class="form-group">
+        <div class="pad_vertical">
+            <input type="search" class="form-control" placeholder="Search..." ng-model="searchIndustry" />
+        </div>
+        <button ng-show="tagselected.length > 0" class="btn btn-default" style="padding: 4px 10px;border-radius: 3px;margin-top: 10px;" ng-click="clearAll()">Clear All</button>
+        <div class="checkbox" ng-repeat="tag in tagscopy | filter:searchIndustry ">
+            <label>
+                <input type="checkbox" ng-click="toggleSelectedTag(tag)" ng-model="tag.checked" fa-track-event="event"> {{tag.tags}}
+            </label>
+        </div>
+    </div>
+</script> -->
 <!-- /.container -->
