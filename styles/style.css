@@ -23,9 +23,9 @@
 .signUpbtn {
     background: #F26822;
     border: 0;
-    padding: 5px 25px;
+    padding: 8px 35px;
     border-radius: 2px;
-    margin-top: -4px;
+    margin-top: -8px;
     outline: 0;
 }
 
@@ -49,7 +49,7 @@ header .intro-text .intro-lead-in {
         margin-bottom: 50px !important;
     }
     section {
-        padding: 75px 0 !important;
+        padding: 0px 0 !important;
     }
     .modal-dialog {
         width: 435px !important;
@@ -67,11 +67,16 @@ header {
     background-image: url(../img/headerBg.png) !important;
 }
 
+.headsUp {
+    background-image: url(../img/Group 4098.png) !important;
+}
+
 .searchIcon {
     margin-right: -40px;
     color: #F26822;
     font-size: 20px;
     margin-top: 10px;
+    z-index: 9999 !important;
 }
 
 .searcherr {
@@ -285,4 +290,165 @@ footer {
     font-size: 12px;
     color: #929191;
     font-weight: 200;
+}
+
+.basket2 {
+    width: 33px;
+    margin-top: -6px;
+    margin-left: 15px;
+}
+
+#subHeaderHolder {
+    position: absolute;
+    z-index: 9999;
+    top: 71px;
+    width: 85%;
+    margin-left: 0;
+}
+
+#subHeaderHolder .contentz {
+    width: 515px;
+    margin: auto;
+    text-align: center;
+    padding: 45px;
+    margin-top: 20px;
+}
+
+#subHeaderHolder .locator {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+#subHeaderHolder h3 {
+    color: #fff;
+    font-weight: 300 !important;
+    text-transform: none;
+    font-size: 26px;
+    line-height: 40px;
+    margin-top: -7px;
+}
+
+#subHeaderHolder button {
+    background: #F26822;
+    border: 0px;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.fixbotttomsub {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    margin-top: -68px;
+    padding: 13px 80px 10px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.fixbotttomsub .btn-warning {
+    color: #8e8e8e;
+    background-color: #fff;
+    border-color: #F26822;
+    padding: 10px 25px;
+    border-radius: 2px;
+}
+
+.fixbotttomsub .btn-warning:active,
+.fixbotttomsub .btn-warning:focus,
+.fixbotttomsub .btn-warning:visited {
+    color: #fff;
+    background-color: #F26822;
+    border-color: #F26822;
+}
+
+hr {
+    margin-top: 15px;
+}
+
+.suber {
+    padding: 15px 80px;
+    background: #fff;
+    box-shadow: 1px 3px 5px -1px #ccc;
+}
+
+.cardStarHoldr {
+    margin-top: -25px;
+    background: rgba(6, 6, 6, 0.4);
+    padding: 2px;
+}
+
+.cardStarHoldr .list-inline>li {
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-size: 13px;
+}
+
+.thumbnail .caption {
+    padding: 10px 15px;
+    color: #333;
+}
+
+.div {
+    padding-left: 10px;
+    font-size: 14px;
+    color: #757575;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 10px 18px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #F26822;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    z-index: 2;
+    color: #ffffff;
+    background-color: #F26822;
+    border-color: #ddd;
+}
+
+.lister {
+    height: 130px;
+    width: 130px;
+    background-size: 260px 130px;
+    background-position-x: -55px;
+}
+
+.listerRight {
+    display: block;
+    position: absolute;
+    right: 30px;
+    text-align: right;
+}
+
+.listerRight div {
+    font-size: 13px;
+    margin: 6px 0px;
+    color: #333;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 0px solid #ddd;
 }

@@ -9,7 +9,7 @@
                 $locationProvider.hashPrefix("");
 
 
-                $urlRouterProvider.otherwise('/main/menu');
+                $urlRouterProvider.otherwise('/main/orders');
 
                 $stateProvider
 
@@ -30,7 +30,8 @@
                     })
                     .state('main.orders', {
                         url: '/orders',
-                        templateUrl: 'modules/orders/orders.html'
+                        templateUrl: 'modules/orders/orders.html',
+                        controller: 'orderCtrl'
                     })
                     .state('main.menu', {
                         url: '/menu',
