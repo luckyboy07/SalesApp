@@ -16,7 +16,8 @@
                     
                     .state('main', {
                         url: '/main',
-                        templateUrl: 'modules/main.html'
+                        templateUrl: 'modules/main.html',
+                        controller:'MainCtrl'
                     })
                     .state('main.home', {
                         url: '/home',
