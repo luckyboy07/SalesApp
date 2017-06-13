@@ -2,13 +2,17 @@
     'use strict';
 
     angular.module('starter')
-        .controller('listCtrl', listCtrl);
+        .controller('userCtrl', userCtrl);
 
-    listCtrl.$inject = ['$scope', '$stateParams', '$state'];
+    userCtrl.$inject = ['$scope', '$stateParams', '$state'];
 
-    function listCtrl($scope, $stateParams, $state) {
-        console.log('listCtrl');
+    function userCtrl($scope, $stateParams, $state) {
+        console.log('userCtrl');
         $scope.details = {};
         $scope.lists = [1, 2 ,3, 4, 5, 6];
+
+        $scope.changeView = function(view) {
+        	$scope.showDiv = view;
+        }
     }
 })();

@@ -33,6 +33,21 @@
                         templateUrl: 'modules/orders/orders.html',
                         controller: 'orderCtrl'
                     })
+                    .state('main.users', {
+                        url: '/users',
+                        templateUrl: 'modules/users/users.html',
+                        controller: 'userCtrl'
+                    })
+                    .state('main.my-orders', {
+                        url: '/my-orders',
+                        templateUrl: 'modules/orders/myOrders.html',
+                        controller: 'myOrderCtrl'
+                    })
+                    .state('main.checkout', {
+                        url: '/checkout',
+                        templateUrl: 'modules/checkout/checkout.html',
+                        controller: 'checkoutCtrl'
+                    })
                     .state('main.menu', {
                         url: '/menu',
                         templateUrl: 'modules/menu/menu.html',

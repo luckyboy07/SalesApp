@@ -42,6 +42,16 @@
                 modalInstance.dismiss('cancel');
             }
         }
+
+        $scope.openMyordersModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'modules/modals/myordersModal.html',
+                scope: $scope
+            });
+            $scope.cancel = function() {
+                modalInstance.dismiss('cancel');
+            }
+        }
     };
 
 

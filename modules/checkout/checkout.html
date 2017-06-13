@@ -1,0 +1,98 @@
+<nav id="mainNav" class="navbar navbar-default navbar-custom" style="background: #fff;padding: 10px 10px 3px 10px;margin-bottom: 0;">
+    <div class="container" ng-init="gridview = true; listview = false; mapview = false;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top"><img class="logoer" src="img/Group 10.png"> PickDish</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll headermenu" ng-click="openLoginModal()" style="color: #f26822;margin-right: 15px;">Login</a>
+                </li>
+                <li>
+                    <a class="page-scroll headermenu" ng-click="openSignupModal()">
+                        <button class="signUpbtn">Signup</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="page-scroll headermenu">
+                        <img class="basket2" src="img/shopping-basket.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div style="font-size:25px; background:#FFF; padding-left:55px;">
+    Checkout
+</div>
+<div class="container">
+    <div style="padding:20px">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                <!-- <img src="/img/Image 401.png"> -->
+                <div class="lister" style="background-image: url(../img/Mcdonald.png);"></div>
+                <div style="padding: 10px 30px;">
+                    <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
+                    <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                        <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                            <div class="div">Fast Food</div>
+                        </li>
+                        <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                            <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                <img src="img/Image401.png" style="width:70px; height:70px; ">
+                <ul style="list-style:none; padding-left:20px">
+                    <li style="display: flex;">
+                        <div>Meaty Cheese Burger</div>
+                        <i class="glyphicon glyphicon-trash" style="margin-left:230px"></i>
+                    </li>
+                    <li>
+                        <div>$ 8.00</div>
+                    </li>
+                </ul>
+            </li>
+            <div style="margin-top: 5px; padding-left:30px; background:#FFF; height:65px">
+                Add delivery notes
+            </div>
+            <ul class="list-group-item" style="margin-top:5px; padding-left:30px;">
+                <li style="display: flex;">
+                    Sub Total:
+                    <div style="margin-left:375px">
+                        $24.00
+                    </div>
+                </li>
+                <li style="display: flex;">
+                    Tax:
+                    <div style="margin-left:411px">
+                        $50.00
+                    </div>
+                </li>
+                <li style="display: flex;">
+                    Delivery Fee:
+                    <div style="margin-left:361px">
+                        $4.00
+                    </div>
+                </li>
+            </ul>
+            <div style="margin-top: 3px; padding-left:30px; background:#FFF; height:20px">
+                Total
+            </div>            
+            <button type="button" class="btn btn-warning">Warning</button>
+        </div>
+        <div class="col-md-6">
+            MAP
+        </div>
+    </div>
+</div>
