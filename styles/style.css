@@ -98,6 +98,7 @@ header {
     width: 140px;
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
+    outline: 0;
 }
 
 h2,
