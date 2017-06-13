@@ -50,7 +50,8 @@
                     })
                     .state('main.menu', {
                         url: '/menu',
-                        templateUrl: 'modules/menu/menu.html'
+                        templateUrl: 'modules/menu/menu.html',
+                        controller: 'menuCtrl'
                     });
                 RestangularProvider.setBaseUrl(API_URL + API_VERSION);
 
