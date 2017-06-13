@@ -13,5 +13,18 @@
             { title: 'Dynamic Title 1', content: 'Dynamic content 1' },
             { title: 'Dynamic Title 2', content: 'Dynamic content 2', disabled: true }
         ];
+        $scope.records = [{
+            "Name": "Alfreds F",
+            "Country": "Germany"
+        }, {
+            "Name": "Berglunds S",
+            "Country": "Sweden"
+        }, {
+            "Name": "Centro M",
+            "Country": "Mexico"
+        }, {
+            "Name": "Ernst H",
+            "Country": "Austria"
+        }]
     }
 })();
