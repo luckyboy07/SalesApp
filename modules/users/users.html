@@ -1,0 +1,124 @@
+<nav id="mainNav" class="navbar navbar-default navbar-custom" style="background: #fff;padding: 10px 10px 3px 10px;margin-bottom: 0;">
+    <div class="container" ng-init="profile = true; payments = false;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top"><img class="logoer" src="img/Group 10.png"> PickDish</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll headermenu" ng-click="openLoginModal()" style="color: #f26822;margin-right: 15px;">Login</a>
+                </li>
+                <li>
+                    <a class="page-scroll headermenu" ng-click="openSignupModal()">
+                        <button class="signUpbtn">Signup</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="page-scroll headermenu">
+                        <img class="basket2" src="img/shopping-basket.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container" style="margin-top:30px">
+    <div class="row">
+        <div class="col-md-3">
+            <div style="text-align:center; margin-bottom:40px">
+                <img src="img/Group 10.png">
+            </div>
+            <ul class="list-group" style="text-align:center">
+                <li class="list-group-item">
+                    <a ng-click="profile = true; payments = false" class="list-group-item"><span class="glyphicon glyphicon-user"></span> Profile</a>
+                </li>
+                <li class="list-group-item">
+                    <a ng-click="profile = false; payments = true" class="list-group-item"><span class="glyphicon glyphicon-briefcase"></span> Payments</a>
+                </li>
+                <li class="list-group-item">
+                    <a class="list-group-item"><span class="glyphicon glyphicon-off"></span> Logout</a>
+                </li>
+            </ul>
+        </div>
+        <div ng-show="profile">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="color:#F26822; text-transform: none">General Information</h4>
+                        <div class="col-md-6">
+                            <div style="margin-bottom:15px; font-weight:600;">
+                                Name:
+                            </div>
+                            <div style="font-weight:600;">
+                                Email Address:
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div style="margin-bottom:15px; font-weight:600;">
+                                Mobile:
+                            </div>
+                            <div style="font-weight:600;">
+                                Recovery Email:
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9" style="margin-top: 80px">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="color:#F26822; text-transform: none">Address</h4>
+                        <div class="col-md-2">
+                            <div style="margin-bottom:15px; font-weight:600;">
+                                Home:
+                            </div>
+                            <div style="margin-bottom:15px; font-weight:600;">
+                                Work:
+                            </div>
+                            <div style="font-weight:600;">
+                                Office:
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div style="margin-bottom:15px">
+                                Level 4, Pioneer House CDO, Don Apolinar Velez cor. A.Mabini St., Cagayan de Oro City, PH, 9000
+                            </div>
+                            <div style="margin-bottom:15px">
+                                Level 4, Pioneer House CDO, Don Apolinar Velez cor. A.Mabini St., Cagayan de Oro City, PH, 9000
+                            </div>
+                            <div>
+                                Level 4, Pioneer House CDO, Don Apolinar Velez cor. A.Mabini St., Cagayan de Oro City, PH, 9000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9" style="margin-top: 80px">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="color:#F26822; text-transform: none">Connected Accounts</h4>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-show="payments">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="color:#F26822; text-transform: none">Payment Methods</h4>
+                        <div class="col-md-6">
+                            <div style="margin-bottom:15px; font-weight:600;">
+                                Credit Cards:
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
