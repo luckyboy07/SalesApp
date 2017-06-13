@@ -2,6 +2,13 @@
     position: absolute !important;
 }
 
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+    color: #fff !important;
+    background-color: #F26822;
+}
+
 .logoer {
     width: 51px;
     height: 51px;
@@ -54,6 +61,10 @@ header .intro-text .intro-lead-in {
     .modal-dialog {
         width: 435px !important;
         margin: 30px auto;
+    }
+    .navbar-nav>li>a {
+        padding-top: 20px;
+        padding-bottom: 15px;
     }
 }
 
@@ -295,7 +306,7 @@ footer {
 
 .basket2 {
     width: 33px;
-    margin-top: -6px;
+    margin-top: -2px;
     margin-left: 15px;
 }
 
@@ -772,4 +783,10 @@ hr {
     padding: 6px 10px;
     border-radius: 2px;
     left: 25px;
+}
+
+#profiler {
+    
+    text-transform: none;
+    font-weight: 300 !important;
 }
