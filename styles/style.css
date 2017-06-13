@@ -762,3 +762,14 @@ hr {
     margin: 8px 0;
     outline: 0;
 }
+
+#GridScheduler {
+    position: absolute;
+    top: 10px;
+    background: rgba(255, 255, 255, 0.77);
+    text-align: center;
+    font-size: 11px;
+    padding: 6px 10px;
+    border-radius: 2px;
+    left: 25px;
+}
