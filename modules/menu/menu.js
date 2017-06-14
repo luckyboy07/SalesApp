@@ -4,10 +4,11 @@
     angular.module('starter')
         .controller('menuCtrl', menuCtrl);
 
-    menuCtrl.$inject = ['$scope', '$stateParams', '$state'];
+    menuCtrl.$inject = ['$scope', '$stateParams', '$state','$rootScope'];
 
-    function menuCtrl($scope, $stateParams, $state) {
-        console.log('menuCtrl');
+    function menuCtrl($scope, $stateParams, $state,$rootScope) {
+        $rootScope.showuser = true;
+        console.log('menuCtrl',$rootScope.showuser  );
         $scope.details = {};
         $scope.tabs = [
             { title: 'Dynamic Title 1', content: 'Dynamic content 1' },
@@ -26,5 +27,6 @@
             "Name": "Ernst H",
             "Country": "Austria"
         }]
+
     }
 })();

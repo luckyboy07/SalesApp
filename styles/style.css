@@ -370,7 +370,7 @@ footer {
     padding: 10px 25px;
     border-radius: 2px;
 }
-
+.fixbotttomsub .btn-warning.active,
 .fixbotttomsub .btn-warning:active,
 .fixbotttomsub .btn-warning:focus,
 .fixbotttomsub .btn-warning:visited {

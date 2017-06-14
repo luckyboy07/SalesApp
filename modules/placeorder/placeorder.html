@@ -1,0 +1,45 @@
+<div style="font-size:25px; background:#FFF; padding-left:55px;">
+    Pay and Place Order
+</div>
+<div class="container">
+    <div style="padding:20px">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </div>
+    <div class="col-md-12">
+      <md-steppers  md-selected="selected" md-stretch-steppers="always">
+      <md-step label="Step 1" md-complete="completed" ng-disabled="disabled">
+        <md-content>
+          <h1>
+          Content Step 1
+          </h1>
+          <md-button class="md-raised md-primary" ng-click="disabled = false">Enable Step 2</md-button>
+          <md-button class="md-raised md-primary" ng-click="selected = 1">NEXT</md-button>
+        </md-content>
+      </md-step>
+      <md-step label="Step 2" md-complete="completed" ng-disabled="disabled">
+        <md-content>
+          <h1>
+          Content Step 2
+          </h1>
+          <md-button class="md-raised md-primary" ng-click="selected = 0">PREV</md-button>
+          <md-button class="md-raised md-primary" ng-click="step1.completed = true">Complete Step 1</md-button>
+          <md-button class="md-raised md-primary" ng-click="selected = 2">NEXT</md-button>
+        </md-content>
+      </md-step>
+      <md-step label="Finish" md-complete="completed" ng-disabled="disabled">
+        <md-content>
+          <h1>
+          Finish
+          </h1>
+        </md-content>
+      </md-step>
+    </md-steppers>
+    </div>
+</div>
+<style type="text/css">
+.btn-pick {
+   color: #fff;
+    background-color: #fb6430;
+    border-color: #eea236;
+}
+</style>

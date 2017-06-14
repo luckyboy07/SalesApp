@@ -1,33 +1,4 @@
-<nav id="mainNav" class="navbar navbar-default navbar-custom" style="background: #fff;padding: 10px 10px 3px 10px;margin-bottom: 0;">
-    <div class="container" ng-init="gridview = true; listview = false; mapview = false;">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><img class="logoer" src="img/Group 10.png"> PickDish</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll headermenu" ng-click="openLoginModal()" style="color: #f26822;margin-right: 15px;">Login</a>
-                </li>
-                <li>
-                    <a class="page-scroll headermenu" ng-click="openSignupModal()">
-                        <button class="signUpbtn">Signup</button>
-                    </a>
-                </li>
-                <li>
-                    <a class="page-scroll headermenu">
-                        <img class="basket2" src="img/shopping-basket.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="">
+<div class="" ng-init="initmap()">
     <!-- STORE IMAGE BACK PREVIEW -->
     <!-- STORE IMAGE BACK PREVIEW -->
     <!-- STORE IMAGE BACK PREVIEW -->
@@ -49,7 +20,7 @@
             </div>
         </div>
     </div>
-    <div class="fixbotttomsub ">
+    <div class="fixbotttomsub">
         <div class="row" style="display: flex;width: 100%;margin: 0;">
             <div class="btn-group" style="width: 295px;">
                 <button type="button" class="btn btn-warning"><img src="img/delivery-motorbike copy.png" style="width: 22px;margin-top: -3px;"> Delivery</button>
@@ -63,14 +34,20 @@
                 </div>
             </div>
             <div class="btn-group" style="width: 290px;margin-right: -35px;">
-                <button type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="gridview = true; listview = false; mapview = false;"><i class="glyphicon glyphicon-th" style="font-size: 22px;"></i></button>
-                <button type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="listview = true; gridview = false; mapview = false;"><i class="glyphicon glyphicon-menu-hamburger" style="font-size: 22px;"></i></button>
-                <button type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="mapview = true; gridview = false; listview = false;"><i class="glyphicon glyphicon-map-marker" style="font-size: 22px;"></i></button>
+                <button ng-class="{'active':gridview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="gridview = true; listview = false; mapview = false;initmap()">
+                    <i class="glyphicon glyphicon-th" style="font-size: 22px;"></i>
+                </button>
+                <button ng-class="{'active':listview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="listview = true; gridview = false; mapview = false;">
+                    <i class="glyphicon glyphicon-menu-hamburger" style="font-size: 22px;"></i>
+                </button>
+                <button ng-class="{'active':mapview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="mapview = true; gridview = false; listview = false;">
+                    <i class="glyphicon glyphicon-map-marker" style="font-size: 22px;"></i>
+                </button>
             </div>
         </div>
     </div>
 </div>
-<section id="portfolio" class="bg-light-gray">
+<section id="portfolio" class="bg-light-gray" ng-if="gridview || listview || mapview">
     <div class="suber">
         <div style="display: flex">
             <div class="dropdown">
@@ -104,7 +81,8 @@
     <div class="container">
         <div class="row">
             <div class="text-center">
-                <h3 style="text-transform: none;padding: 15px;font-weight: 300 !important;">You have 100 restaurants to choose from</h3>
+                <h3 style="text-transform: none;padding: 15px;font-weight: 300 !important;">
+                You have 100 restaurants to choose from</h3>
             </div>
             <!-- LISTVIEW -->
             <!-- LISTVIEW -->
@@ -237,7 +215,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-7">MAP HERE</div>
+                <div class="col-md-7">
+                        <ng-map zoom="20" center="8.4807258,124.64481989999999" style="height:800px" on-center-changed="centerCustomMarker()" >
+                            <marker position="8.4807258,124.64481989999999" ng-click="showCustomMarker()"></marker>
+                            <!-- <marker position="2600 pennsylvania ave, washington DC" on-click="vm.showCustomMarker()"></marker> -->
+                        </ng-map>
+                </div>
             </div>
         </div>
         <div class="col-md-12">

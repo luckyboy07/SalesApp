@@ -13,11 +13,11 @@
 
                 $stateProvider
 
-                    
+
                     .state('main', {
                         url: '/main',
                         templateUrl: 'modules/main.html',
-                        controller:'MainCtrl'
+                        controller: 'MainCtrl'
                     })
                     .state('main.home', {
                         url: '/home',
@@ -52,6 +52,16 @@
                         url: '/menu',
                         templateUrl: 'modules/menu/menu.html',
                         controller: 'menuCtrl'
+                    })
+                    .state('main.delivery', {
+                        url: '/delivery',
+                        templateUrl: 'modules/delivery/delivery.html',
+                        controller: 'deliveryCtrl'
+                    })
+                     .state('main.placeorder', {
+                        url: '/placeorder',
+                        templateUrl: 'modules/placeorder/placeorder.html',
+                        controller: 'placeOrderCtrl'
                     });
                 RestangularProvider.setBaseUrl(API_URL + API_VERSION);
 

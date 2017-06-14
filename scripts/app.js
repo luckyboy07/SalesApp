@@ -7,7 +7,10 @@
             'ui.bootstrap',
             'restangular',
             'angularMoment',
-            'ngLetterAvatar'
+            'ngLetterAvatar',
+            'ngMap',
+            'ngMaterial',
+            'md-steppers'
         ])
         .constant('API_URL', 'http://localhost:3000')
         .constant('API_VERSION', '/api/1.0/')
