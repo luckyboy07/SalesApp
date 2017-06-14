@@ -50,9 +50,10 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a class="page-scroll headermenu">
+                <li class="dropdown">
+                    <a class="page-scroll headermenu dropdown-toggle">
                         <img class="basket2" src="img/shopping-basket.png">
+                        <div id="noTif">2</div>
                     </a>
                 </li>
             </ul>
@@ -187,7 +188,7 @@
                         <h3 style="text-transform: none;margin-bottom: 20px;">Burger</h3>
                         <div class="row">
                             <div class="col-md-6">
-                                <div id="customCArd">
+                                <div id="customCArd" ng-click="openMenuModal()">
                                     <div>
                                         <img src="img/burger.png" style="width: 110px;">
                                     </div>

@@ -27,7 +27,8 @@
         $scope.openLoginModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: 'modules/modals/loginModal.html',
-                scope: $scope
+                scope: $scope,
+                size: 'lg'
             });
             $scope.cancel = function() {
                 modalInstance.dismiss('cancel');
@@ -36,7 +37,8 @@
         $scope.openSignupModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: 'modules/modals/signupModal.html',
-                scope: $scope
+                scope: $scope,
+                size: 'lg'
             });
             $scope.cancel = function() {
                 modalInstance.dismiss('cancel');
@@ -46,6 +48,15 @@
         $scope.openMyordersModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: 'modules/modals/myordersModal.html',
+                scope: $scope
+            });
+            $scope.cancel = function() {
+                modalInstance.dismiss('cancel');
+            }
+        }
+        $scope.openMenuModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'modules/modals/menuModal.html',
                 scope: $scope
             });
             $scope.cancel = function() {

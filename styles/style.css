@@ -58,7 +58,7 @@ header .intro-text .intro-lead-in {
     section {
         padding: 0px 0 !important;
     }
-    .modal-dialog {
+    .modal-lg {
         width: 435px !important;
         margin: 30px auto;
     }
@@ -786,7 +786,34 @@ hr {
 }
 
 #profiler {
-    
     text-transform: none;
     font-weight: 300 !important;
+}
+
+#noTif {
+    position: absolute;
+    color: #fff;
+    background: #eb6c52;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    font-size: 11px;
+    text-align: center;
+    line-height: 15px;
+    top: 17px;
+    right: 0px;
+}
+
+.headermenu:active {
+    color: #fff !important;
+    background-color: #F26822;
+}
+
+#cartDrop {
+    position: absolute;
+    background: #fff;
+    width: 200px;
+    height: 500px;
+    color: #000;
+    z-index: 999999 !important;
 }
