@@ -29,23 +29,23 @@
                     </div>
                 </li> -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" style="color: #F26822;">
+                    <a class="dropdown-toggle" data-toggle="dropdown" style="color: #F26822;min-width: 200px !important;text-align: right;">
                         <!--  <span class="glyphicon glyphicon-user"></span>&nbsp; -->
                         <strong id="profiler">Nombre</strong>
                         <img src="img/man.png" style="width: 41px;margin-top: -5px;">
-                        <span id="profiler" class="glyphicon glyphicon-chevron-down"></span>
+                        <span id="profiler" class="glyphicon glyphicon-triangle-bottom" style="font-size: 11px;"></span>
                     </a>
-                    <ul class="dropdown-menu" style="min-width: 151px !important;">
-                        <li>
+                    <ul class="dropdown-menu" style="min-width: 200px !important;z-index: 9999 !important;">
+                        <li style="padding: 10px;">
                             My Favorites
                         </li>
-                        <li>
+                        <li style="padding: 10px;">
                             My Orders
                         </li>
-                        <li>
+                        <li style="padding: 10px;">
                             My Account
                         </li>
-                        <li>
+                        <li style="padding: 10px;">
                             Logout
                         </li>
                     </ul>
@@ -404,7 +404,7 @@
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <div id="ExtraBtn">
+                        <div id="ExtraBtn" ng-click="openLoginModal()">
                             Add Review
                             <br>
                             <small style="font-size: 15px;">Login | Signup</small>

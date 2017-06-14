@@ -312,7 +312,7 @@ footer {
 
 #subHeaderHolder {
     position: absolute;
-    z-index: 9999;
+    z-index: 1 !important;
     top: 71px;
     width: 85%;
     margin-left: 0;
