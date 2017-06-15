@@ -8,74 +8,111 @@
     <div class="col-md-12">
         <md-steppers md-selected="selected" md-stretch-steppers="always" ng-init="selected = 0">
             <md-step label="Delivery information" md-complete="step1.completed" ng-disabled="step1.disabled">
-                    <div class="col-md-6">
-                        <li class="list-group-item" style="display: flex;padding: 20px 30px;">
-                            <!-- <img src="/img/Image 401.png"> -->
-                            <div class="lister" style="background-image: url(../img/Mcdonald.png);"></div>
-                            <div style="padding: 10px 30px;">
-                                <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
-                                <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
-                                    <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
-                                        <div class="div">Fast Food</div>
-                                    </li>
-                                    <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
-                                        <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="list-group-item" style="display: flex;padding: 20px 30px;">
-                            <img src="img/Image401.png" style="width:70px; height:70px; ">
-                            <ul style="list-style:none; padding-left:20px">
-                                <li style="display: flex;">
-                                    <div>Meaty Cheese Burger</div>
-                                    <i class="glyphicon glyphicon-trash" style="margin-left:230px"></i>
+                <div class="col-md-6">
+                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                        <!-- <img src="/img/Image 401.png"> -->
+                        <div class="lister" style="background-image: url(../img/Mcdonald.png);"></div>
+                        <div style="padding: 10px 30px;">
+                            <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
+                            <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                                <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                                    <div class="div">Fast Food</div>
                                 </li>
-                                <li>
-                                    <div>$ 8.00</div>
+                                <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                                    <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
                                 </li>
                             </ul>
-                        </li>
-                        <div style="margin-top: 5px; padding-left:30px; background:#FFF; height:65px">
-                            Add delivery notes
                         </div>
-                        <ul class="list-group-item" style="margin-top:5px; padding-left:30px;">
+                    </li>
+                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                        <img src="img/Image401.png" style="width:70px; height:70px; ">
+                        <ul style="list-style:none; padding-left:20px">
                             <li style="display: flex;">
-                                Sub Total:
-                                <div style="margin-left:375px">
-                                    $24.00
-                                </div>
+                                <div>Meaty Cheese Burger</div>
+                                <i class="glyphicon glyphicon-trash" style="margin-left:230px"></i>
                             </li>
-                            <li style="display: flex;">
-                                Tax:
-                                <div style="margin-left:411px">
-                                    $50.00
-                                </div>
-                            </li>
-                            <li style="display: flex;">
-                                Delivery Fee:
-                                <div style="margin-left:361px">
-                                    $4.00
-                                </div>
+                            <li>
+                                <div>$ 8.00</div>
                             </li>
                         </ul>
-                        <div style="margin-top: 3px; padding-left:30px; background:#FFF; height:20px">
-                            Total
-                        </div>
-                        <button type="button" class="btn btn-pick" ui-sref="main.proof">Proceed</button>
+                    </li>
+                    <div style="margin-top: 5px; padding-left:30px; background:#FFF; height:65px">
+                        Add delivery notes
                     </div>
-                   <!--  <md-button class="md-raised md-primary" ng-click="step2.disabled = false">Enable Step 2</md-button>
+                    <ul class="list-group-item" style="margin-top:5px; padding-left:30px;">
+                        <li style="display: flex;">
+                            Sub Total:
+                            <div style="margin-left:375px">
+                                $24.00
+                            </div>
+                        </li>
+                        <li style="display: flex;">
+                            Tax:
+                            <div style="margin-left:411px">
+                                $50.00
+                            </div>
+                        </li>
+                        <li style="display: flex;">
+                            Delivery Fee:
+                            <div style="margin-left:361px">
+                                $4.00
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 3px; padding-left:30px; background:#FFF; height:20px">
+                        Total
+                    </div>
+                    <button type="button" class="btn btn-pick" ui-sref="main.proof">Proceed</button>
+                </div>
+                <!--  <md-button class="md-raised md-primary" ng-click="step2.disabled = false">Enable Step 2</md-button>
                     <md-button class="md-raised md-primary" ng-click="selected = 1">NEXT</md-button> -->
                 </md-content>
             </md-step>
             <md-step label="Pay and Place Order" md-complete="step2.completed" ng-disabled="step2.disabled">
                 <md-content>
-                    <h1>
-          Content Step 2
-          </h1>
-                    <md-button class="md-raised md-primary" ng-click="selected = 0">PREV</md-button>
+                    <div class="step">
+                        <div>
+                            <div class="circle">1</div>
+                            <div class="line"></div>
+                        </div>
+                        <div>
+                            <div class="title">Confirming order with restaurant</div>
+                            <div class="body">Lorem ipsum dolor sit amet, </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div>
+                            <div class="circle">2</div>
+                            <div class="line"></div>
+                        </div>
+                        <div>
+                            <div class="title">Food is being prepared</div>
+                            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div>
+                            <div class="circle">3</div>
+                            <div class="line"></div>
+                        </div>
+                        <div>
+                            <div class="title">Courier is on the way</div>
+                            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
+                        </div>
+                    </div>
+                     <div class="step">
+                        <div>
+                            <div class="circle">4</div>
+                            <div class="line"></div>
+                        </div>
+                        <div>
+                            <div class="title">Food is ariving.Time to eat</div>
+                            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
+                        </div>
+                    </div>
+                    <!--   <md-button class="md-raised md-primary" ng-click="selected = 0">PREV</md-button>
                     <md-button class="md-raised md-primary" ng-click="step1.completed = true">Complete Step 1</md-button>
-                    <md-button class="md-raised md-primary" ng-click="selected = 2">NEXT</md-button>
+                    <md-button class="md-raised md-primary" ng-click="selected = 2">NEXT</md-button> -->
                 </md-content>
             </md-step>
             <md-step label="Order Tracking" md-complete="step3.completed" ng-disabled="step3.disabled">
@@ -93,5 +130,55 @@
     color: #fff;
     background-color: #fb6430;
     border-color: #eea236;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.step {
+    position: relative;
+    min-height: 32px/* circle-size */
+    ;
+}
+
+.step > div:first-child {
+    position: static;
+    height: 0;
+}
+
+.step > div:last-child {
+    margin-left: 32px;
+    padding-left: 16px;
+}
+
+.circle {
+    background: #4285f4;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.line {
+    position: absolute;
+    border-left: 1px solid gainsboro;
+    left: 16px;
+    bottom: 10px;
+    top: 42px;
+}
+
+.step:last-child .line {
+    display: none;
+}
+
+.title {
+    line-height: 32px;
+    font-weight: bold;
 }
 </style>
