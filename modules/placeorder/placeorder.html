@@ -70,6 +70,14 @@
             </md-step>
             <md-step label="Pay and Place Order" md-complete="step2.completed" ng-disabled="step2.disabled">
                 <md-content>
+                    
+                      <md-button class="md-raised md-primary" ng-click="selected = 0">PREV</md-button>
+                    <md-button class="md-raised md-primary" ng-click="step1.completed = true">Complete Step 1</md-button>
+                    <md-button class="md-raised md-primary" ng-click="selected = 2">NEXT</md-button>
+                </md-content>
+            </md-step>
+            <md-step label="Order Tracking" md-complete="step3.completed" ng-disabled="step3.disabled">
+                <md-content>
                     <div class="step">
                         <div>
                             <div class="circle">1</div>
@@ -100,7 +108,7 @@
                             <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
                         </div>
                     </div>
-                     <div class="step">
+                    <div class="step">
                         <div>
                             <div class="circle">4</div>
                             <div class="line"></div>
@@ -110,16 +118,6 @@
                             <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
                         </div>
                     </div>
-                    <!--   <md-button class="md-raised md-primary" ng-click="selected = 0">PREV</md-button>
-                    <md-button class="md-raised md-primary" ng-click="step1.completed = true">Complete Step 1</md-button>
-                    <md-button class="md-raised md-primary" ng-click="selected = 2">NEXT</md-button> -->
-                </md-content>
-            </md-step>
-            <md-step label="Order Tracking" md-complete="step3.completed" ng-disabled="step3.disabled">
-                <md-content>
-                    <h1>
-          Finish
-          </h1>
                 </md-content>
             </md-step>
         </md-steppers>
