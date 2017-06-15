@@ -10,7 +10,8 @@
             'ngLetterAvatar',
             'ngMap',
             'ngMaterial',
-            'md-steppers'
+            'md-steppers',
+            'monospaced.qrcode'
         ])
         .constant('API_URL', 'http://localhost:3000')
         .constant('API_VERSION', '/api/1.0/')
