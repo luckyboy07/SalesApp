@@ -1,126 +1,330 @@
-<div style="font-size:25px; background:#FFF; padding-left:55px;">
+<div id="subHeader">
     Pay and Place Order
 </div>
 <div class="container">
-    <div style="padding:20px">
-        <i class="glyphicon glyphicon-arrow-left"></i>
-    </div>
-    <div class="col-md-12">
-        <md-steppers md-selected="selected" md-stretch-steppers="always" ng-init="selected = 0">
-            <md-step label="Delivery information" md-complete="step1.completed" ng-disabled="step1.disabled">
-                <div class="col-md-6">
-                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
-                        <!-- <img src="/img/Image 401.png"> -->
-                        <div class="lister" style="background-image: url(../img/Mcdonald.png);"></div>
-                        <div style="padding: 10px 30px;">
-                            <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
-                            <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
-                                <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
-                                    <div class="div">Fast Food</div>
-                                </li>
-                                <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
-                                    <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
-                        <img src="img/Image401.png" style="width:70px; height:70px; ">
-                        <ul style="list-style:none; padding-left:20px">
-                            <li style="display: flex;">
-                                <div>Meaty Cheese Burger</div>
-                                <i class="glyphicon glyphicon-trash" style="margin-left:230px"></i>
-                            </li>
-                            <li>
-                                <div>$ 8.00</div>
-                            </li>
-                        </ul>
-                    </li>
-                    <div style="margin-top: 5px; padding-left:30px; background:#FFF; height:65px">
-                        Add delivery notes
-                    </div>
-                    <ul class="list-group-item" style="margin-top:5px; padding-left:30px;">
-                        <li style="display: flex;">
-                            Sub Total:
-                            <div style="margin-left:375px">
-                                $24.00
+    <div class="row">
+        <div id="backpager" style="padding: 20px 17px 0px;">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <md-steppers md-selected="selected" md-stretch-steppers="always" ng-init="selected = 0" md-alternative="Alternative" md-linear="Linear">
+                    <md-step label="Delivery information" md-complete="step1.completed" ng-disabled="step1.disabled">
+                        <md-step-body>
+                            <div class="col-md-6">
+                                <div class="boX-shadower" style="padding: 30px 40px;background: #fff;margin-bottom: 50px;">
+                                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                                        <!-- <img src="/img/Image 401.png"> -->
+                                        <div class="lister" style="background-image: url(../img/Mcdonald.png);background-size: 150px 130px;background-position-x: -10px;width: 190px;"></div>
+                                        <div style="padding: 10px 30px;">
+                                            <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
+                                            <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                                                <li style="display: flex;margin-bottom: 10px;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                                                    <div class="div">Fast Food</div>
+                                                </li>
+                                                <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                                                    <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <hr style="margin-left: 15px;margin-right: 15px;margin-bottom: 10px;">
+                                    <li class="list-group-item">
+                                        <textarea id="textMedia" class="form-control" rows="4" placeholder="Add delivery notes"></textarea>
+                                    </li>
+                                    <div style="padding: 10px 15px">
+                                        <div class="row" id="customTable">
+                                            <div class="col-md-6">
+                                                <div>Sub Total</div>
+                                                <div>Tax</div>
+                                                <div>Delivery Fee</div>
+                                            </div>
+                                            <div class="col-md-6" style="text-align: right;">
+                                                <div>$24.00</div>
+                                                <div>$0.00</div>
+                                                <div>$0.00</div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <hr>
+                                                <h4>Total <span style="float:right;">$ 28.00</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  <div style="padding: 10px 15px;">
+                                        <button id="pickDishBtn" class="login FullWidth" style="margin-top: 5px;" ui-sref="main.placeorder">Proceed</button>
+                                    </div> -->
+                                </div>
                             </div>
-                        </li>
-                        <li style="display: flex;">
-                            Tax:
-                            <div style="margin-left:411px">
-                                $50.00
+                            <div class="col-md-6">
+                                <div class="boX-shadower" style="padding: 30px 40px;background: #fff;margin-bottom: 50px;">
+                                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                                        <!-- <img src="/img/Image 401.png"> -->
+                                        <div class="lister" style="background-image: url(../img/Mcdonald.png);background-size: 150px 130px;background-position-x: -10px;width: 190px;"></div>
+                                        <div style="padding: 10px 30px;">
+                                            <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
+                                            <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                                                <li style="display: flex;margin-bottom: 10px;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                                                    <div class="div">Fast Food</div>
+                                                </li>
+                                                <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                                                    <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <hr style="margin-left: 15px;margin-right: 15px;margin-bottom: 10px;">
+                                    <li class="list-group-item">
+                                        <textarea id="textMedia" class="form-control" rows="4" placeholder="Add delivery notes"></textarea>
+                                    </li>
+                                    <div style="padding: 10px 15px">
+                                        <div class="row" id="customTable">
+                                            <div class="col-md-6">
+                                                <div>Sub Total</div>
+                                                <div>Tax</div>
+                                                <div>Delivery Fee</div>
+                                            </div>
+                                            <div class="col-md-6" style="text-align: right;">
+                                                <div>$24.00</div>
+                                                <div>$0.00</div>
+                                                <div>$0.00</div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <hr>
+                                                <h4>Total <span style="float:right;">$ 28.00</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  <div style="padding: 10px 15px;">
+                                        <button id="pickDishBtn" class="login FullWidth" style="margin-top: 5px;" ui-sref="main.placeorder">Proceed</button>
+                                    </div> -->
+                                </div>
                             </div>
-                        </li>
-                        <li style="display: flex;">
-                            Delivery Fee:
-                            <div style="margin-left:361px">
-                                $4.00
-                            </div>
-                        </li>
-                    </ul>
-                    <div style="margin-top: 3px; padding-left:30px; background:#FFF; height:20px">
-                        Total
-                    </div>
-                    <button type="button" class="btn btn-pick" ui-sref="main.proof">Proceed</button>
-                </div>
-                <!--  <md-button class="md-raised md-primary" ng-click="step2.disabled = false">Enable Step 2</md-button>
+                        </md-step-body>
+                        <!--  <md-button class="md-raised md-primary" ng-click="step2.disabled = false">Enable Step 2</md-button>
                     <md-button class="md-raised md-primary" ng-click="selected = 1">NEXT</md-button> -->
-                </md-content>
-            </md-step>
-            <md-step label="Pay and Place Order" md-complete="step2.completed" ng-disabled="step2.disabled">
-                <md-content>
-                    
-                      <md-button class="md-raised md-primary" ng-click="selected = 0">PREV</md-button>
-                    <md-button class="md-raised md-primary" ng-click="step1.completed = true">Complete Step 1</md-button>
-                    <md-button class="md-raised md-primary" ng-click="selected = 2">NEXT</md-button>
-                </md-content>
-            </md-step>
-            <md-step label="Order Tracking" md-complete="step3.completed" ng-disabled="step3.disabled">
-                <md-content>
-                    <div class="step">
-                        <div>
-                            <div class="circle">1</div>
-                            <div class="line"></div>
-                        </div>
-                        <div>
-                            <div class="title">Confirming order with restaurant</div>
-                            <div class="body">Lorem ipsum dolor sit amet, </div>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div>
-                            <div class="circle">2</div>
-                            <div class="line"></div>
-                        </div>
-                        <div>
-                            <div class="title">Food is being prepared</div>
-                            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div>
-                            <div class="circle">3</div>
-                            <div class="line"></div>
-                        </div>
-                        <div>
-                            <div class="title">Courier is on the way</div>
-                            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div>
-                            <div class="circle">4</div>
-                            <div class="line"></div>
-                        </div>
-                        <div>
-                            <div class="title">Food is ariving.Time to eat</div>
-                            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
-                        </div>
-                    </div>
-                </md-content>
-            </md-step>
-        </md-steppers>
+                    </md-step>
+                    <md-step label="Pay and Place Order" md-complete="step2.completed" ng-disabled="step2.disabled">
+                        <md-content>
+                            <md-button class="md-raised md-primary" ng-click="selected = 0">PREV</md-button>
+                            <md-button class="md-raised md-primary" ng-click="step1.completed = true">Complete Step 1</md-button>
+                            <md-button class="md-raised md-primary" ng-click="selected = 2">NEXT</md-button>
+                        </md-content>
+                    </md-step>
+                    <md-step label="Order Tracking" md-complete="step3.completed" ng-disabled="step3.disabled">
+                        <md-content>
+                            <div class="step">
+                                <div>
+                                    <div class="circle">1</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div>
+                                    <div class="title">Confirming order with restaurant</div>
+                                    <div class="body">Lorem ipsum dolor sit amet, </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div>
+                                    <div class="circle">2</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div>
+                                    <div class="title">Food is being prepared</div>
+                                    <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div>
+                                    <div class="circle">3</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div>
+                                    <div class="title">Courier is on the way</div>
+                                    <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div>
+                                    <div class="circle">4</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div>
+                                    <div class="title">Food is ariving.Time to eat</div>
+                                    <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
+                                </div>
+                            </div>
+                        </md-content>
+                    </md-step>
+                </md-steppers>
+            </div>
+        </div>
     </div>
 </div>
 <style type="text/css">

@@ -165,13 +165,12 @@
             <!-- MAPVIEW -->
             <!-- MAPVIEW -->
             <div ng-show="mapview">
-                <div class="col-md-5">
+                <div class="col-md-5" style="padding-right: 0;">
                     <ul class="list-group">
                         <li class="list-group-item" ng-repeat="items in lists" style="display: flex;padding: 20px 15px;border: 1px solid #ccc !important;">
                             <div id="mapviewPlaceholderHolder"><img src="img/placeholder.png" style="width: 40px">
                                 <div id="mapviewPlaceholder">A</div>
                             </div>
-                            <!-- <img src="/img/Image 401.png"> -->
                             <div class="lister" style="background-image: url(../img/Image401.png);height: 95px;width: 110px;background-size: 190px 95px;background-position-x: -45px;"></div>
                             <div style="padding: 0px 30px;margin-top: -6px;">
                                 <div style="font-size: 18px;">McDonald's - Divisoria</div>
@@ -179,9 +178,6 @@
                                     <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 15px;height: 16px;">
                                         <div class="div">Fast Food</div>
                                     </li>
-                                    <!--   <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
-                                        <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
-                                    </li> -->
                                     <li>
                                         <ul class="list-inline" style="margin: 0;color: #F1DB1D">
                                             <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
@@ -197,29 +193,14 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- <div class="listerRight">
-                                <ul class="list-inline" style="margin: 0;float: right;color: #F1DB1D">
-                                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                                    <small style="color: #333333;">(448)</small>
-                                </ul>
-                                <br>
-                                <div>Opens @ 8:30 AM - 10:30 PM</div>
-                                <div style="color: #FA7751">Minimum Order Php 50</div>
-                                <div>SPONSORED</div>
-                                <div><i class="glyphicon glyphicon-menu-right" style="color: #FA7751"></i></div>
-                            </div> -->
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-7">
-                        <ng-map zoom="20" center="8.4807258,124.64481989999999" style="height:800px" on-center-changed="centerCustomMarker()" >
-                            <marker position="8.4807258,124.64481989999999" ng-click="showCustomMarker()"></marker>
-                            <!-- <marker position="2600 pennsylvania ave, washington DC" on-click="vm.showCustomMarker()"></marker> -->
-                        </ng-map>
+                <div class="col-md-7" style="padding-left: 0;">
+                    <ng-map zoom="20" center="8.4807258,124.64481989999999" id="mapler" on-center-changed="centerCustomMarker()">
+                        <marker position="8.4807258,124.64481989999999" ng-click="showCustomMarker()"></marker>
+                        <!-- <marker position="2600 pennsylvania ave, washington DC" on-click="vm.showCustomMarker()"></marker> -->
+                    </ng-map>
                 </div>
             </div>
         </div>

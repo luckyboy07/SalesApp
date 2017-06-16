@@ -2,12 +2,14 @@
     'use strict';
 
     angular.module('starter')
-        .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
-            $stateProvider
-                .state('main.calendars', {
-                    url: '/calendars',
-                    templateUrl: 'modules/calendar/calendar.html',
-                    controller: 'calendarCtrl'
-                });
-        }]);
+        .controller('homeCtrl', homeCtrl);
+
+    homeCtrl.$inject = ['$scope', '$stateParams', '$state', '$rootScope'];
+
+    function homeCtrl($scope, $stateParams, $state, $rootScope) {
+        $scope.displaytrans = true;
+        console.log('homeCtrl', $rootScope.showuser);
+        console.log('homeCtrl', $scope.displaytrans);
+
+    }
 })();

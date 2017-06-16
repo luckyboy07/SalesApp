@@ -1,7 +1,7 @@
-<nav id="mainNav" class="navbar navbar-default navbar-custom" style="background: #fff;padding: 10px 10px 3px 10px;margin-bottom: 0;">
+<nav id="mainNav" ng-init="displaytrans = true" class="navbar navbar-default navbar-custom" ng-class="{'NavHomeHeader':displaytrans && showuser == false, 'NavHeader':showuser}">
     <div class="container" ng-init="gridview = true; listview = false; mapview = false;">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
+        <div class="navbar-header page-scroll" style="margin-top: 10px;">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
@@ -10,18 +10,18 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li ng-if="!showuser">
-                    <a href="" class="page-scroll headermenu" ng-click="openLoginModal()" style="color: #f26822;margin-right: 15px;">Login</a>
+                    <a href="" class="page-scroll headermenu" ng-click="openLoginModal()" style="color: #f26822;margin-right: 15px;margin-top: 7px;">Login</a>
                 </li>
                 <li ng-if="!showuser">
-                    <a class="page-scroll headermenu" ng-click="openSignupModal()">
+                    <a class="page-scroll headermenu" ng-click="openSignupModal()" style="margin-top: 7px;">
                         <button class="signUpbtn">Signup</button>
                     </a>
                 </li>
-                <li ng-if="!showuser">
+                <!-- <li ng-if="!showuser">
                     <a href="" class="page-scroll headermenu" ng-click="cartModal()">
                         <img class="basket2" src="img/shopping-basket.png">
                     </a>
-                </li>
+                </li> -->
                 <li class="dropdown" ng-if="showuser">
                     <a class="dropdown-toggle" data-toggle="dropdown" style="color: #F26822;min-width: 200px !important;text-align: right;">
                         <strong id="profiler">Nombre</strong>
@@ -38,7 +38,7 @@
                         <li style="padding: 10px;">
                             My Account
                         </li>
-                        <li style="padding: 10px;">
+                        <li style="padding: 10px;" ui-sref="main.home">
                             Logout
                         </li>
                     </ul>

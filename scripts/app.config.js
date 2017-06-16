@@ -21,7 +21,8 @@
                     })
                     .state('main.home', {
                         url: '/home',
-                        templateUrl: 'modules/home/home.html'
+                        templateUrl: 'modules/home/home.html',
+                        controller: 'homeCtrl'
                     })
                     .state('main.restolist', {
                         url: '/restolist',

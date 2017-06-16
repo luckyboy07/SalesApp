@@ -2,6 +2,30 @@
     position: absolute !important;
 }
 
+.NavHomeHeader {
+    padding: 0px;
+    margin-bottom: 0;
+    background: transparent;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 20px;
+}
+
+.NavHeader {
+    padding: 0px;
+    margin-bottom: 0;
+    background: #fff;
+    position: inherit;
+    ;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0px;
+    padding: 0px !important;
+}
+
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover {
@@ -370,6 +394,7 @@ footer {
     padding: 10px 25px;
     border-radius: 2px;
 }
+
 .fixbotttomsub .btn-warning.active,
 .fixbotttomsub .btn-warning:active,
 .fixbotttomsub .btn-warning:focus,
@@ -529,6 +554,7 @@ hr {
     background: #fff;
     box-shadow: 1px 1px 2px 0px #ccc;
     margin-bottom: 30px;
+    outline: 0 !important;
 }
 
 #customCArd .content {
@@ -816,4 +842,249 @@ hr {
     height: 500px;
     color: #000;
     z-index: 999999 !important;
+}
+
+#mapler {
+    height: 817px;
+    display: block;
+    border: 1px solid #ccc;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 0px;
+}
+
+.list-group-item:first-child {
+    border-top-right-radius: 0px !important;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0px !important;
+}
+
+.pickDishIncremBtn,
+.pickDishIncremBtn:hover,
+.pickDishIncremBtn:active,
+.pickDishIncremBtn:focus {
+    background: #F26822 !important;
+    padding: 11px 20px !important;
+    border: 0;
+    box-shadow: 1px 1px 1px 1px #d6d4d4;
+}
+
+.pickDishInputIncrem {
+    text-align: center !important;
+    height: 42px !important;
+    border: 1px solid #f26822 !important;
+    box-shadow: 1px 1px 1px 1px #d6d4d4 !important;
+    font-weight: 600 !important;
+    font-size: 17px !important;
+}
+
+#pickDishBtn {
+    padding: 10px 20px;
+    background: #f26822;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0px 0px 2px 1px #ccc;
+    outline: 0 !important;
+}
+
+#pickDishBtn img {
+    width: 18px;
+    margin-top: -4px;
+    margin-right: 13px;
+}
+
+.FullWidth {
+    width: 100%;
+}
+
+#ListModal {
+    display: flex;
+    padding: 10px;
+}
+
+#ListModal img {
+    width: 55px;
+    height: 45px;
+    position: absolute;
+    margin-top: 14px;
+}
+
+#ListModal .title {
+    font-weight: 500;
+}
+
+#ListModal .price {
+    font-size: 14px;
+}
+
+#ListModal .floater {
+    position: absolute;
+    right: 20px;
+    text-align: right;
+}
+
+#ListModal .floater div {
+    margin-top: 28px;
+    margin-right: 30px;
+    font-weight: 500;
+}
+
+#customTable {
+    background: #F5F5F5;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 3px;
+}
+
+.ListModalIncremBtn,
+.ListModalIncremBtn:hover,
+.ListModalIncremBtn:active,
+.ListModalIncremBtn:focus {
+    background: #F26822 !important;
+    padding: 7px 12px !important;
+    border: 0;
+    // box-shadow: 1px 1px 1px 1px #d6d4d4;
+    font-size: 9px;
+}
+
+.ListModalInputIncrem {
+    text-align: center !important;
+    height: 26px !important;
+    border: 1px solid #f26822 !important;
+    // box-shadow: 1px 1px 1px 1px #d6d4d4 !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    padding: 0px !important;
+}
+
+.listHolderzz {
+    border-bottom: .55px solid #eaeaea;
+}
+
+#subHeader {
+    font-size: 25px;
+    background: #FFF;
+    padding-left: 92px;
+    padding: 20px 92px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 2px 2px 0px #b7b7b7;
+}
+
+#backpager {
+    padding: 20px 17px;
+    font-size: 18px;
+    color: #f26735;
+}
+
+#textMedia {
+    background: #F5F5F5;
+    border: 0px;
+    box-shadow: none;
+}
+
+.boX-shadower {
+    box-shadow: 0px 1px 1px 1px #dedede;
+}
+
+md-steppers-wrapper {
+    width: 700px;
+    margin: auto;
+}
+
+.md-step md-step-label-wrapper::before {
+    background: rgb(255, 255, 255);
+    color: #333333;
+    display: block;
+    margin: auto !important;
+    width: 45px;
+    min-width: 26px;
+    text-align: center;
+    height: 45px;
+    font-size: 23px;
+    line-height: 41px;
+    border-radius: 50%;
+    margin-right: 0;
+    content: attr(stepindex);
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-item-align: center;
+    align-self: center;
+    right: 0;
+    left: 0;
+    border: 2px solid #F26822;
+}
+
+.md-step.md-active md-step-label-wrapper::before,
+.md-step.md-success md-step-label-wrapper::before {
+    background: #F26822;
+    color: #fff;
+}
+
+.md-step md-step-label-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    margin-top: -15px;
+}
+
+.md-step {
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    padding: 24px 0 24px 0;
+    -webkit-transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    float: left;
+    font-weight: 500;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    /* height: 100px; */
+}
+
+md-step-content {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+    overflow: hidden;
+}
+
+md-steppers-content-wrapper {
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+md-steppers:not(.md-no-step-content):not(.md-dynamic-height) {
+    min-height: 1100px;
 }
