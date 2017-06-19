@@ -4,9 +4,9 @@
     angular.module('starter')
         .controller('placeOrderCtrl', placeOrderCtrl);
 
-    placeOrderCtrl.$inject = ['$scope', '$stateParams', '$state', '$q'];
+    placeOrderCtrl.$inject = ['$scope', '$stateParams', '$state', '$q','$timeout','NgMap'];
 
-    function placeOrderCtrl($scope, $stateParams, $state, $q) {
+    function placeOrderCtrl($scope, $stateParams, $state, $q,$timeout,NgMap) {
         // $scope.$mdStepper = $mdStepper;
         console.log('placeOrderCtrl');
         $scope.details = {};
@@ -26,42 +26,22 @@
         $scope.selectedTimeAsNumber = 37840000; // (formatted: 6:30 PM)
         $scope.sharedDate = "2017-06-19T01:00:00.773Z"; // (formatted: 6/19/17 9:00 AM)
 
-        // $scope.enableNextStep = function nextStep() {
-        //     //do not exceed into max step
-        //     if ($scope.selectedStep >= $scope.maxStep) {
-        //         return;
-        //     }
-        //     //do not increment $scope.stepProgress when submitting from previously completed step
-        //     if ($scope.selectedStep === $scope.stepProgress - 1) {
-        //         $scope.stepProgress = $scope.stepProgress + 1;
-        //     }
-        //     $scope.selectedStep = $scope.selectedStep + 1;
-        // }
-
-        // $scope.moveToPreviousStep = function moveToPreviousStep() {
-        //     if ($scope.selectedStep > 0) {
-        //         $scope.selectedStep = $scope.selectedStep - 1;
-        //     }
-        // }
-
-        // $scope.submitCurrentStep = function submitCurrentStep(stepData, isSkip) {
-        //     var deferred = $q.defer();
-        //     $scope.showBusyText = true;
-        //     console.log('On before submit');
-        //     if (!stepData.completed && !isSkip) {
-        //         //simulate $http
-        //         $timeout(function() {
-        //             $scope.showBusyText = false;
-        //             console.log('On submit success');
-        //             deferred.resolve({ status: 200, statusText: 'success', data: {} });
-        //             //move to next step when success
-        //             stepData.completed = true;
-        //             $scope.enableNextStep();
-        //         }, 1000)
-        //     } else {
-        //         $scope.showBusyText = false;
-        //         $scope.enableNextStep();
-        //     }
-        // }
+        $scope.initmap = function() {
+            console.log('diri')
+            $timeout(function() {
+                // var vm = this;
+                $scope.coo = '8.4807258,124.64481989999999';
+                NgMap.getMap().then(function(map) {
+                    $scope.showCustomMarker = function(evt) {
+                        map.customMarkers.foo.setVisible(true);
+                        map.customMarkers.foo.setPosition(getPosition());
+                    };
+                    $scope.closeCustomMarker = function(evt) {
+                        this.style.display = 'none';
+                    };
+                });
+            }, 500)
+        };
+        $scope.initmap();
     }
 })();
