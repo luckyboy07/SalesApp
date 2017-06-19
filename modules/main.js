@@ -14,11 +14,10 @@
     angular.module('starter')
         .controller('MainCtrl', MainCtrl);
 
-    MainCtrl.$inject = ['$scope', '$uibModal', '$rootScope','$state']
+    MainCtrl.$inject = ['$scope', '$uibModal', '$rootScope', '$state']
 
-    function MainCtrl($scope, $uibModal, $rootScope,$state) {
-        $rootScope.showuser = false;
-
+    function MainCtrl($scope, $uibModal, $rootScope, $state) {
+        $rootScope.showuser = true;
         $scope.dynamicPopover = {
             templateUrl: 'myPopoverTemplate.html',
             backdrop: 'static',
