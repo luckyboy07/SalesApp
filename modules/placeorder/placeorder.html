@@ -493,7 +493,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="boX-shadower">MAP</div>
+                                <div class="boX-shadower">
+                                    <ng-map zoom="20" style="height: 300px !important;" center="8.4807258,124.64481989999999" id="mapler" on-center-changed="centerCustomMarker()">
+                                        <marker position="8.4807258,124.64481989999999" ng-click="showCustomMarker()"></marker>
+                                        <!-- <marker position="2600 pennsylvania ave, washington DC" on-click="vm.showCustomMarker()"></marker> -->
+                                    </ng-map>
+                                </div>
                             </div>
                         </md-step-body>
                     </md-step>
