@@ -1,15 +1,107 @@
-<div style="font-size:25px; background:#FFF; padding-left:55px;">
+<div id="subHeader" ng-init="deliVer = true;">
     Proof of Purchase
 </div>
 <div class="container">
-    <div style="padding:20px">
-        <i class="glyphicon glyphicon-arrow-left"></i>
-    </div>
-    <div class="col-md-12">
-    <h2>Thank you for trusting PickDish!</h2>
-    <div>
-    <qrcode data="string"></qrcode>
-    	 <!-- <barcode type="code128b" string="1234567895" options="options"></barcode> -->
-    </div>
+    <div class="row">
+        <div id="backpager" style="padding: 20px 17px 0px;">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+            <h2 style="text-transform: none;margin-bottom: 45px;">Thank you for trusting PickDish!</h2>
+            <!-- <div>
+                <qrcode data="string"></qrcode>
+            </div> -->
+            <div>
+                <div class="col-md-5" style="float: inherit;margin: auto;text-align: left;">
+                    <div class="boX-shadower" style="padding: 30px 10px;background: #fff;margin-bottom: 80px;">
+                        <li class="list-group-item" style="display: flex;padding: 10px 30px;">
+                            <!-- <img src="/img/Image 401.png"> -->
+                            <div class="lister" style="    background-image: url(../img/Mcdonald.png);background-size: 130px 120px;background-position-x: -11px;width: 155px; height: 110px;"></div>
+                            <div style="padding: 0px 0px 10px 30px;text-align: left;">
+                                <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
+                                <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                                    <li style="display: flex;margin-bottom: 10px;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                                        <div class="div">Fast Food</div>
+                                    </li>
+                                    <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                                        <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <div class="row" id="diverTion">
+                            <div class="col-md-4">
+                                <div>Order #</div>
+                                <div>Transaction #</div>
+                                <div>Order Date</div>
+                            </div>
+                            <div class="col-md-4" style="color: #f26822;">
+                                <div>C2541</div>
+                                <div>000000000C2541</div>
+                                <div>05/25/2017</div>
+                            </div>
+                            <div class="col-md-4" style="padding-right: 45px;text-align: right;">
+                                <qrcode data="string"></qrcode>
+                            </div>
+                            <div class="col-md-12" style="padding: 0;margin-top: 15px;">
+                                <div class="col-md-4">
+                                    <div>Charged</div>
+                                </div>
+                                <div class="col-md-4" style="color: #f26822;">
+                                    <div>Php 2500.00</div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="font-size: 11px;color: #7d7d7d;">
+                                <img src="img/visa.png" style="width: 30px;margin-right: 5px"> Personal **** **** **** 1234
+                            </div>
+                            <div class="col-md-12">
+                                <div style="margin-top: 15px;font-size: 18px;">Orders</div>
+                            </div>
+                            <div class="col-md-12" id="recieptLister">
+                                <div>Meaty Cheese Burger<span style="float: right;">$16.00</span></div>
+                                <small style="color: #F26822">$ 8.00 x2</small>
+                            </div>
+                            <div class="col-md-12" id="recieptLister">
+                                <div>Meaty Cheese Burger<span style="float: right;">$16.00</span></div>
+                                <small style="color: #F26822">$ 8.00 x2</small>
+                            </div>
+                            <div class="col-md-12" id="recieptLister">
+                                <div>Meaty Cheese Burger<span style="float: right;">$16.00</span></div>
+                                <small style="color: #F26822">$ 8.00 x2</small>
+                                <br>
+                                <small style="color: #9e9e9e;">serve with garlic</small>
+                            </div>
+                            <div class="col-md-12" id="recieptLister">
+                                <div>Meaty Cheese Burger<span style="float: right;">$16.00</span></div>
+                                <small style="color: #F26822">$ 8.00 x2</small>
+                                <br>
+                                <small style="color: #9e9e9e;">in olive oil</small>
+                            </div>
+                            <div class="col-md-12" style="padding-right: 45px;">
+                                <div class="row" id="customTable">
+                                    <div class="col-md-6" style="font-size: 11px;">
+                                        <div>Sub Total</div>
+                                        <div>Tax</div>
+                                        <div>Delivery Fee</div>
+                                    </div>
+                                    <div class="col-md-6" style="text-align: right;font-size: 11px;">
+                                        <div>$24.00</div>
+                                        <div>$0.00</div>
+                                        <div>$0.00</div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <hr>
+                                        <h4>Total <span style="float:right;">$ 28.00</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="padding-right: 45px;">
+                                <button id="pickDishBtn" class="login FullWidth" style="margin-top: 30px;" ui-sref="main.proof">Print</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

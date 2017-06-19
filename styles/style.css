@@ -1,3 +1,4 @@
+
 .navbar-fixed-top {
     position: absolute !important;
 }
@@ -402,6 +403,7 @@ footer {
     color: #fff;
     background-color: #F26822;
     border-color: #F26822;
+    outline: 0;
 }
 
 hr {
@@ -1264,8 +1266,26 @@ md-steppers:not(.md-no-step-content):not(.md-dynamic-height) {
     width: 47%;
     float: right;
 }
-#diverTion{
-        margin-left: 15px;
+
+#diverTion {
+    margin-left: 15px;
     line-height: 2;
     font-weight: 500;
+}
+
+#recieptLister {
+    padding-right: 45px;
+    font-size: 13px;
+    color: #5a5a5a;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+#accountFooter {
+    background: rgba(241, 192, 29, 0.31);
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    border-radius: 3px;
+    margin-top: 115px;
 }

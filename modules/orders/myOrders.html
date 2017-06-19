@@ -1,64 +1,63 @@
-<nav id="mainNav" class="navbar navbar-default navbar-custom" style="background: #fff;padding: 10px 10px 3px 10px;margin-bottom: 0;">
-    <div class="container" ng-init="gridview = true; listview = false; mapview = false;">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><img class="logoer" src="img/Group 10.png"> PickDish</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll headermenu" ng-click="openLoginModal()" style="color: #f26822;margin-right: 15px;">Login</a>
-                </li>
-                <li>
-                    <a class="page-scroll headermenu" ng-click="openSignupModal()">
-                        <button class="signUpbtn">Signup</button>
-                    </a>
-                </li>
-                <li>
-                    <a class="page-scroll headermenu">
-                        <img class="basket2" src="img/shopping-basket.png">
-                    </a>
+<div id="subHeader" ng-init="profile = true;">
+    My Orders
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="margin-top: 50px;">
+            <ul class="list-group" style="padding-top: 10px;padding-bottom: 10px;background: #fff;outline: 0;" ng-click="openMyordersModal()">
+                <li class="list-group-item" ng-repeat="items in lists" style="display: flex;padding: 20px 30px;">
+                    <!-- <img src="/img/Image 401.png"> -->
+                    <div class="lister" style="background-image: url(../img/Image401.png);background-size: 217px 130px;background-position-x: -50px;"></div>
+                    <div style="padding: 10px 30px;">
+                        <div style="font-size: 22px;">McDonald's - Divisoria</div>
+                        <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                            <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                                <div class="div">Fast Food</div>
+                            </li>
+                            <li style="display: flex;margin-top: 10px;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                                <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="listerRight">
+                        <!-- <ul class="list-inline" style="margin: 0;float: right;color: #F1DB1D">
+                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
+                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
+                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
+                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
+                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
+                            <small style="color: #333333;">(448)</small>
+                        </ul>
+                        <br> -->
+                        <div>Ordered: May 26, 2017 : 1:30 PM</div>
+                        <div>2 items, $24</div>
+                        <div style="color: #FA7751;font-size: 15px;"><i>Pending</i></div>
+                        <div><img src="img/delivery-motorbikeActive.png" style="width: 23px;margin-right: 10px;margin-top: -4px;"><i class="glyphicon glyphicon-menu-right" style="color: #FA7751"></i></div>
+                    </div>
                 </li>
             </ul>
         </div>
+        <div class="col-md-12">
+            <div style="margin: auto;width: 428px;margin-bottom: 20px;">
+                <ul class="pagination">
+                    <li><a>Previous</a></li>
+                    <li><a>1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>3</a></li>
+                    <li><a>4</a></li>
+                    <li><a>5</a></li>
+                    <li><a>6</a></li>
+                    <li><a>Next</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-</nav>
-<div>
-    <div></div>
-    <ul class="list-group" style="padding-top: 10px;padding-bottom: 10px;background: #fff;" ng-click="openMyordersModal()">
-        <li class="list-group-item" ng-repeat="items in lists" style="display: flex;padding: 20px 30px;">
-            <!-- <img src="/img/Image 401.png"> -->
-            <div class="lister" style="background-image: url(../img/Image401.png);"></div>
-            <div style="padding: 10px 30px;">
-                <div style="font-size: 22px;">McDonald's - Divisoria</div>
-                <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
-                    <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
-                        <div class="div">Fast Food</div>
-                    </li>
-                    <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
-                        <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="listerRight">
-                <ul class="list-inline" style="margin: 0;float: right;color: #F1DB1D">
-                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                    <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                    <small style="color: #333333;">(448)</small>
-                </ul>
-                <br>
-                <div>Opens @ 8:30 AM - 10:30 PM</div>
-                <div style="color: #FA7751">Minimum Order Php 50</div>
-                <div>SPONSORED</div>
-                <div><i class="glyphicon glyphicon-menu-right" style="color: #FA7751"></i></div>
-            </div>
-        </li>
-    </ul>
 </div>
+<style type="text/css">
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 834px;
+        margin: 30px auto;
+    }
+}
+</style>
