@@ -22,6 +22,10 @@
             { step: 3, completed: false, optional: false, data: {} },
         ];
 
+        $scope.time = "1970-01-01T02:35:40.000Z"; // (formatted: 10:35 AM)
+        $scope.selectedTimeAsNumber = 37840000; // (formatted: 6:30 PM)
+        $scope.sharedDate = "2017-06-19T01:00:00.773Z"; // (formatted: 6/19/17 9:00 AM)
+
         // $scope.enableNextStep = function nextStep() {
         //     //do not exceed into max step
         //     if ($scope.selectedStep >= $scope.maxStep) {

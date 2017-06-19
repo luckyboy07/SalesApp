@@ -1088,3 +1088,184 @@ md-steppers-content-wrapper {
 md-steppers:not(.md-no-step-content):not(.md-dynamic-height) {
     min-height: 1100px;
 }
+
+.md-step::after {
+    width: 25px;
+}
+
+
+/*CHECKBOX*/
+
+
+/*CHECKBOX*/
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0px 0px 0px 1px transparent;
+    }
+    50% {
+        box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 15px transparent;
+    }
+}
+
+.md-radio {
+    margin: 16px 0;
+}
+
+.md-radio.md-radio-inline {
+    display: inline-block;
+}
+
+.md-radio input[type="radio"] {
+    display: none;
+}
+
+.md-radio input[type="radio"]:checked + label:before {
+    border-color: #F26822;
+    animation: ripple 0.2s linear forwards;
+}
+
+.md-radio input[type="radio"]:checked + label:after {
+    transform: scale(1);
+}
+
+.md-radio label {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    padding: 0 45px;
+    margin-bottom: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20.5px;
+    margin-right: 70px;
+    margin-left: 25px;
+}
+
+.md-radio label:before,
+.md-radio label:after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    transition: all .3s ease;
+    transition-property: transform, border-color;
+}
+
+.md-radio label:before {
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+}
+
+.md-radio label:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    background: #F26822;
+}
+
+
+/*CHECKBOX*/
+
+
+/*CHECKBOX*/
+
+#boxHeaderText {
+    // text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+#cardDivider {
+    background: rgba(241, 192, 29, 0.37);
+    border: 1px solid rgba(241, 219, 29, 0.21);
+    padding: 10px 27px;
+    margin-top: 10px;
+}
+
+#darkContent {
+    padding: 20px;
+    background: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    margin-top: 20px;
+}
+
+#darkContent .labelz {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+#clearAddon {
+    border: 0 !important;
+    background: transparent !important;
+}
+
+#bottomBorderInput {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    color: #f26822;
+    font-size: 18px;
+}
+
+._720kb-datepicker-calendar-header:nth-child(odd) {
+    background: rgba(247, 120, 56, 0.85);
+}
+
+#seeMap {
+    background: #fff;
+    padding: 0px 115px 20px;
+    font-size: 17px;
+    color: #f26822;
+}
+
+#bottomBorderInputSemi {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    color: #f26822 !important;
+    font-size: 15px;
+}
+
+#creditHolder {
+    padding: 11px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 47%;
+}
+
+#paypal {
+    text-align: center;
+    padding: 9.3px;
+    background: #f26822;
+    border: 1px solid #f26822;
+    border-radius: 3px;
+    width: 47%;
+    float: right;
+}
+#diverTion{
+        margin-left: 15px;
+    line-height: 2;
+    font-weight: 500;
+}

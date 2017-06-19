@@ -11,7 +11,9 @@
             'ngMap',
             'ngMaterial',
             'md-steppers',
-            'monospaced.qrcode'
+            'monospaced.qrcode',
+            '720kb.datepicker',
+            'mgcrea.ngStrap'
         ])
         .constant('API_URL', 'http://localhost:3000')
         .constant('API_VERSION', '/api/1.0/')

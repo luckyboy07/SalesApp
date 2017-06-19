@@ -1,4 +1,4 @@
-<div id="subHeader">
+<div id="subHeader" ng-init="deliVer = true;">
     Pay and Place Order
 </div>
 <div class="container">
@@ -12,131 +12,112 @@
                     <md-step label="Delivery information" md-complete="step1.completed" ng-disabled="step1.disabled">
                         <md-step-body>
                             <div class="col-md-6">
-                                <div class="boX-shadower" style="padding: 30px 40px;background: #fff;margin-bottom: 50px;">
-                                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
-                                        <!-- <img src="/img/Image 401.png"> -->
-                                        <div class="lister" style="background-image: url(../img/Mcdonald.png);background-size: 150px 130px;background-position-x: -10px;width: 190px;"></div>
-                                        <div style="padding: 10px 30px;">
-                                            <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
-                                            <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
-                                                <li style="display: flex;margin-bottom: 10px;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
-                                                    <div class="div">Fast Food</div>
-                                                </li>
-                                                <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
-                                                    <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
-                                                </li>
-                                            </ul>
+                                <div class="boX-shadower" style="padding: 30px 30px;background: #fff;margin-bottom: 50px;">
+                                    <div id="boxHeaderText">Do you wish to Pick Up? or have it Delivered?</div>
+                                    <div>
+                                        <div class="md-radio md-radio-inline">
+                                            <input id="3" type="radio" name="g2" checked ng-click="pickUp = false; deliVer = true">
+                                            <label for="3">Deliver</label>
                                         </div>
-                                    </li>
-                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
-                                        <div id="ListModal">
-                                            <img src="img/miniburger.png">
-                                            <div style="padding-left: 65px;">
-                                                <div class="title">Meaty Chee</div>
-                                                <div class="price">$ 20.00</div>
-                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
-                                                    <div class="input-group" style="width: 75%;">
-                                                        <span class="input-group-btn">
-                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
-                                          <span class="glyphicon glyphicon-minus"></span>
-                                                        </button>
-                                                        </span>
-                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
-                                                        <span class="input-group-btn">
-                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
-                                            <span class="glyphicon glyphicon-plus"></span>
-                                                        </button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="floater" style="margin-top: 10px">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                                <div>$ 40.00</div>
-                                            </div>
+                                        <div class="md-radio md-radio-inline">
+                                            <input id="4" type="radio" name="g2" ng-click="pickUp = true; deliVer = false">
+                                            <label for="4">Pick Up</label>
                                         </div>
-                                    </li>
-                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
-                                        <div id="ListModal">
-                                            <img src="img/miniburger.png">
-                                            <div style="padding-left: 65px;">
-                                                <div class="title">Meaty Chee</div>
-                                                <div class="price">$ 20.00</div>
-                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
-                                                    <div class="input-group" style="width: 75%;">
-                                                        <span class="input-group-btn">
-                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
-                                          <span class="glyphicon glyphicon-minus"></span>
-                                                        </button>
-                                                        </span>
-                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
-                                                        <span class="input-group-btn">
-                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
-                                            <span class="glyphicon glyphicon-plus"></span>
-                                                        </button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="floater" style="margin-top: 10px">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                                <div>$ 40.00</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
-                                        <div id="ListModal">
-                                            <img src="img/miniburger.png">
-                                            <div style="padding-left: 65px;">
-                                                <div class="title">Meaty Chee</div>
-                                                <div class="price">$ 20.00</div>
-                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
-                                                    <div class="input-group" style="width: 75%;">
-                                                        <span class="input-group-btn">
-                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
-                                          <span class="glyphicon glyphicon-minus"></span>
-                                                        </button>
-                                                        </span>
-                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
-                                                        <span class="input-group-btn">
-                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
-                                            <span class="glyphicon glyphicon-plus"></span>
-                                                        </button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="floater" style="margin-top: 10px">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                                <div>$ 40.00</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <hr style="margin-left: 15px;margin-right: 15px;margin-bottom: 10px;">
-                                    <li class="list-group-item">
-                                        <textarea id="textMedia" class="form-control" rows="4" placeholder="Add delivery notes"></textarea>
-                                    </li>
-                                    <div style="padding: 10px 15px">
-                                        <div class="row" id="customTable">
-                                            <div class="col-md-6">
-                                                <div>Sub Total</div>
-                                                <div>Tax</div>
-                                                <div>Delivery Fee</div>
-                                            </div>
-                                            <div class="col-md-6" style="text-align: right;">
-                                                <div>$24.00</div>
-                                                <div>$0.00</div>
-                                                <div>$0.00</div>
-                                            </div>
+                                    </div>
+                                    <div ng-show="deliVer">
+                                        <div id="cardDivider">Please fill up your delivery information below.</div>
+                                        <div id="darkContent">
+                                            <div class="labelz">Pick Up Time : 35 min</div>
                                             <div class="col-md-12">
-                                                <hr>
-                                                <h4>Total <span style="float:right;">$ 28.00</span></h4>
+                                                <div class="row">
+                                                    <div class="col-md-6" style="padding-left: 0">
+                                                        <datepicker>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon" id="clearAddon"><i class="fa fa-calendar"></i></span>
+                                                                <input class="form-control" id="bottomBorderInput" ng-model="date" type="text" />
+                                                            </div>
+                                                        </datepicker>
+                                                    </div>
+                                                    <div class="col-md-6" style="padding-right: 0">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon" id="clearAddon"><i class="glyphicon glyphicon-time"></i></span>
+                                                            <input type="text" class="form-control" id="bottomBorderInput" size="8" ng-model="time" name="time" bs-timepicker>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="labelz" style="margin-top: 30px;display: -webkit-inline-box;">Delivery Address</div>
+                                            <div>
+                                                <div class="form-group">
+                                                    <select class="form-control" id="sel1">
+                                                        <option>Use Current Location</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </div>
+                                                <div style="text-align: right;color: #f26822;"><i class="glyphicon glyphicon-plus"></i> Add Address</div>
+                                                <div style="background: #fff;padding: 15px;display: flex;margin-top: 20px;">
+                                                    <div><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;z-index: 0;margin-top: 9px;"></i></div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="text" id="bottomBorderInputSemi" class="form-control" placeholder="Unit Number / Building Name(optional)">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" id="bottomBorderInputSemi" class="form-control" placeholder="Address Line 1">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" id="bottomBorderInputSemi" class="form-control" placeholder="City">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" id="bottomBorderInputSemi" class="form-control" placeholder="Postcode">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--  <div style="padding: 10px 15px;">
-                                        <button id="pickDishBtn" class="login FullWidth" style="margin-top: 5px;" ui-sref="main.placeorder">Proceed</button>
-                                    </div> -->
+                                    <div ng-show="pickUp">
+                                        <div id="cardDivider">Please fill up your pick up information below.</div>
+                                        <div id="darkContent">
+                                            <div class="labelz">Pick Up Time : 35 min</div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6" style="padding-left: 0">
+                                                        <datepicker>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon" id="clearAddon"><i class="fa fa-calendar"></i></span>
+                                                                <input class="form-control" id="bottomBorderInput" ng-model="date" type="text" />
+                                                            </div>
+                                                        </datepicker>
+                                                    </div>
+                                                    <div class="col-md-6" style="padding-right: 0">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon" id="clearAddon"><i class="glyphicon glyphicon-time"></i></span>
+                                                            <input type="text" class="form-control" id="bottomBorderInput" size="8" ng-model="time" name="time" bs-timepicker>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="labelz" style="margin-top: 30px;display: -webkit-inline-box;">Pick Up Address</div>
+                                            <div>
+                                                <li class="list-group-item" style="display: flex;padding: 20px 30px;z-index: 0;">
+                                                    <div class="lister" style="    background-image: url(../img/Mcdonald.png);background-size: 80px 50px;background-position-x: -6px;background-position-y: 5px;width: 70px;height: 60px;"></div>
+                                                    <div style="padding: 0px 5px;">
+                                                        <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                                                            <li style="display: flex;">
+                                                                <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <div id="seeMap">See Map <i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;z-index: 0;"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 10px 0px;">
+                                        <button id="pickDishBtn" class="login FullWidth" style="margin-top: 5px;" ng-click="selected = 1">Proceed to Payment</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -268,18 +249,167 @@
                                 </div>
                             </div>
                         </md-step-body>
-                        <!--  <md-button class="md-raised md-primary" ng-click="step2.disabled = false">Enable Step 2</md-button>
-                    <md-button class="md-raised md-primary" ng-click="selected = 1">NEXT</md-button> -->
                     </md-step>
                     <md-step label="Pay and Place Order" md-complete="step2.completed" ng-disabled="step2.disabled">
-                        <md-content>
-                            <md-button class="md-raised md-primary" ng-click="selected = 0">PREV</md-button>
-                            <md-button class="md-raised md-primary" ng-click="step1.completed = true">Complete Step 1</md-button>
-                            <md-button class="md-raised md-primary" ng-click="selected = 2">NEXT</md-button>
-                        </md-content>
+                        <md-step-body>
+                            <div class="col-md-6">
+                                <div class="boX-shadower" style="padding: 30px 30px;background: #fff;margin-bottom: 50px;">
+                                    <div id="boxHeaderText">Payment Method</div>
+                                    <div id="cardDivider">Please select your desired payment method.</div>
+                                    <div class="row">
+                                        <div class="col-md-12" style="margin-top: 20px;">
+                                            <div class="col-md-6" id="creditHolder"><img src="img/credit.png" style="width: 200px;"></div>
+                                            <div class="col-md-6" id="paypal"><img src="img/paypal.png" style="width: 100px;"></div>
+                                        </div>
+                                    </div>
+                                    <div id="darkContent">
+                                        <div>
+                                            <div class="form-group">
+                                                <select class="form-control" id="sel1">
+                                                    <option ng-click="visa = false">johndoe@mail.com</option>
+                                                    <option ng-click="visa = true">xxxx xxxx xxxx 1234 VISA</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div ng-show="visa"><img src="img/card.png"></div>
+                                    </div>
+                                    <div style="padding: 10px 0px;">
+                                        <button id="pickDishBtn" class="login FullWidth" style="margin-top: 5px;" ng-click="selected = 3">Pay & Place Order</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="boX-shadower" style="padding: 30px 40px;background: #fff;margin-bottom: 50px;">
+                                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                                        <!-- <img src="/img/Image 401.png"> -->
+                                        <div class="lister" style="background-image: url(../img/Mcdonald.png);background-size: 150px 130px;background-position-x: -10px;width: 190px;"></div>
+                                        <div style="padding: 10px 30px;">
+                                            <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
+                                            <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                                                <li style="display: flex;margin-bottom: 10px;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                                                    <div class="div">Fast Food</div>
+                                                </li>
+                                                <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                                                    <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                        <div id="ListModal">
+                                            <img src="img/miniburger.png">
+                                            <div style="padding-left: 65px;">
+                                                <div class="title">Meaty Chee</div>
+                                                <div class="price">$ 20.00</div>
+                                                <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                                    <div class="input-group" style="width: 75%;">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                        </span>
+                                                        <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                        <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floater" style="margin-top: 10px">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <div>$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <hr style="margin-left: 15px;margin-right: 15px;margin-bottom: 10px;">
+                                    <li class="list-group-item">
+                                        <textarea id="textMedia" class="form-control" rows="4" placeholder="Add delivery notes"></textarea>
+                                    </li>
+                                    <div style="padding: 10px 15px">
+                                        <div class="row" id="customTable">
+                                            <div class="col-md-6">
+                                                <div>Sub Total</div>
+                                                <div>Tax</div>
+                                                <div>Delivery Fee</div>
+                                            </div>
+                                            <div class="col-md-6" style="text-align: right;">
+                                                <div>$24.00</div>
+                                                <div>$0.00</div>
+                                                <div>$0.00</div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <hr>
+                                                <h4>Total <span style="float:right;">$ 28.00</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  <div style="padding: 10px 15px;">
+                                        <button id="pickDishBtn" class="login FullWidth" style="margin-top: 5px;" ui-sref="main.placeorder">Proceed</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </md-step-body>
                     </md-step>
                     <md-step label="Order Tracking" md-complete="step3.completed" ng-disabled="step3.disabled">
-                        <md-content>
+                        <!--  <md-content>
                             <div class="step">
                                 <div>
                                     <div class="circle">1</div>
@@ -320,7 +450,100 @@
                                     <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing </div>
                                 </div>
                             </div>
-                        </md-content>
+                        </md-content> -->
+                        <md-step-body>
+                            <div class="col-md-6">
+                                <div class="boX-shadower" style="padding: 30px 30px 0px;background: #fff;">
+                                    <div id="boxHeaderText">Order Tracking</div>
+                                    <div style="padding-left: 30px; padding-top: 20px;">
+                                        <div class="step">
+                                            <div>
+                                                <div class="circle ActiveCircle"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                            <div>
+                                                <div class="title">Confirming order with restaurant</div>
+                                                <div class="body">
+                                                    <button class="cancelBtn">Cancel Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div>
+                                                <div class="circle"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                            <div>
+                                                <div class="title">Food is being prepared</div>
+                                                <div class="body"></div>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div>
+                                                <div class="circle"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                            <div>
+                                                <div class="title">Courier is on the way</div>
+                                                <div class="body"></div>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div>
+                                                <div class="circle"></div>
+                                                <!-- <div class="line"></div> -->
+                                            </div>
+                                            <div>
+                                                <div class="title">Food is ariving.Time to eat</div>
+                                                <div class="body"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boX-shadower" style="padding: 0px 0px 25px;background: #fff;margin-bottom: 50px;">
+                                    <div style="text-align: center;background: rgba(234, 199, 81, 0.35);padding: 15px;">
+                                        <div style="color: #F26822;font-size: 25px;">11:45 AM</div>
+                                        <small>Estimated time delivered</small>
+                                    </div>
+                                    <div style="padding: 20px 30px;">
+                                        <button id="pickDishBtn" class="login FullWidth" style="margin-top: 5px;" ng-click="selected = 2">Proceed to Payment</button>
+                                    </div>
+                                    <div style="padding: 5px 30px;text-align: center;"><a style="color: #f26822;font-size: 15px;">Contact Support</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="boX-shadower" style="padding: 30px 40px;background: #fff;margin-bottom: 20px;">
+                                    <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                                        <!-- <img src="/img/Image 401.png"> -->
+                                        <div class="lister" style="background-image: url(../img/Mcdonald.png);background-size: 150px 130px;background-position-x: -10px;width: 190px;"></div>
+                                        <div style="padding: 10px 30px;">
+                                            <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
+                                            <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                                                <li style="display: flex;margin-bottom: 10px;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                                                    <div class="div">Fast Food</div>
+                                                </li>
+                                                <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                                                    <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <div class="row" id="diverTion">
+                                        <div class="col-md-4">
+                                            <div>Order #</div>
+                                            <div>Transaction #</div>
+                                            <div>Order Date</div>
+                                        </div>
+                                        <div class="col-md-8" style="color: #f26822;">
+                                            <div>C2541</div>
+                                            <div>000000000C2541</div>
+                                            <div>05/25/2017</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boX-shadower">MAP</div>
+                            </div>
+                        </md-step-body>
                     </md-step>
                 </md-steppers>
             </div>
@@ -342,7 +565,7 @@
 
 .step {
     position: relative;
-    min-height: 32px/* circle-size */
+    min-height: 75px/* circle-size */
     ;
 }
 
@@ -357,7 +580,7 @@
 }
 
 .circle {
-    background: #4285f4;
+    background: #ffffff;
     width: 32px;
     height: 32px;
     line-height: 32px;
@@ -365,14 +588,19 @@
     position: relative;
     color: white;
     text-align: center;
+    border: 1px solid #f26822;
+}
+
+.ActiveCircle {
+    background: #f26822 !important;
 }
 
 .line {
     position: absolute;
-    border-left: 1px solid gainsboro;
+    border-left: 1px solid #f26822;
     left: 16px;
-    bottom: 10px;
-    top: 42px;
+    bottom: 0px;
+    top: 32px;
 }
 
 .step:last-child .line {
@@ -381,6 +609,22 @@
 
 .title {
     line-height: 32px;
-    font-weight: bold;
+    font-weight: 400;
+}
+
+.form-control {
+    color: #f26822;
+    border: 1px solid #f26822;
+}
+
+.cancelBtn {
+    background: #f26822;
+    border: 0;
+    padding: 7px 20px;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    outline: 0 !important
 }
 </style>
