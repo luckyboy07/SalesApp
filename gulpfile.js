@@ -17,60 +17,61 @@ var runSeq = require('run-sequence');
 
 var paths = {
     styles: './styles/**/*.*',
-    images: './images/**/*.*',
+    images: './img/**/*.*',
     templates: './modules/**/*.html',
     index: 'index.html'
 };
 
 
-gulp.task('less', function () {
+gulp.task('less', function() {
     return gulp.src('./styles/**/*.less')
         .pipe(less())
         .pipe(gulp.dest('./styles/css'));
 });
 
-gulp.task('clean', function () {
+gulp.task('clean', function() {
     return gulp.src('dist').pipe(clean({
         force: true
     }));
 });
 
-gulp.task('copyfonts', function (callback) {
+gulp.task('copyfonts', function(callback) {
     return gulp.src([
-            './lib/bower_components/font-awesome/fonts/fontawesome-webfont.*',
-            './lib/bootstrap/fonts/*.*'
+            './bower_components/font-awesome/fonts/fontawesome-webfont.*',
+            './vendor/bootstrap/fonts/*.*'
         ])
         .pipe(gulp.dest('dist/fonts'));
 });
 
 
-gulp.task('copyimages', function () {
+gulp.task('copyimages', function() {
     return gulp.src(paths.images)
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('dist/img'));
 });
 
 
-gulp.task('minify', function () {
+gulp.task('minify', function() {
     return gulp.src(paths.index)
         .pipe(usemin({
-            js: [minifyJs().on('error', function (err) {
+            js: [minifyJs().on('error', function(err) {
                 console.log('error: ', err)
             }), 'concat'],
             css: [minifyCss({
                 keepSpecialComments: 0
-            }).on('error', function (err) {
+            }).on('error', function(err) {
                 console.log('error: ', err)
-            }), 'concat']
+            }), 'concat'],
+            js1: [minifyJs(), 'concat']
         }))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('copytemplates', function () {
+gulp.task('copytemplates', function() {
     gulp.src(paths.templates)
         .pipe(gulp.dest('dist/modules'));
 });
 
-gulp.task('serve', function () {
+gulp.task('serve', function() {
     browserSync.init({
         notify: false,
         port: 9005,
@@ -84,7 +85,7 @@ gulp.task('serve', function () {
         .on('change', browserSync.reload);
 });
 
-gulp.task('servedist', function () {
+gulp.task('servedist', function() {
     browserSync.init({
         notify: false,
         port: 9013,
@@ -99,10 +100,10 @@ gulp.task('servedist', function () {
 });
 
 
-gulp.task('build', function () {
+gulp.task('build', function() {
     return runSeq('clean', 'minify', 'copytemplates', 'copyfonts', 'copyimages');
 });
 
-gulp.task('dist', function () {
-    return runSeq('minify', 'copytemplates', 'copyfonts','copyimages');
+gulp.task('dist', function() {
+    return runSeq('minify', 'copytemplates', 'copyfonts', 'copyimages');
 });
