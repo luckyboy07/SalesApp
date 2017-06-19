@@ -9,17 +9,16 @@
                 $locationProvider.hashPrefix("");
 
 
-                $urlRouterProvider.otherwise('/main/orders');
+                $urlRouterProvider.otherwise('/home');
 
                 $stateProvider
-
 
                     .state('main', {
                         url: '/main',
                         templateUrl: 'modules/main.html',
                         controller: 'MainCtrl'
                     })
-                    .state('main.home', {
+                    .state('home', {
                         url: '/home',
                         templateUrl: 'modules/home/home.html',
                         controller: 'homeCtrl'

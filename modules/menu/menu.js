@@ -4,9 +4,9 @@
     angular.module('starter')
         .controller('menuCtrl', menuCtrl);
 
-    menuCtrl.$inject = ['$scope', '$stateParams', '$state','$rootScope'];
+    menuCtrl.$inject = ['$scope', '$stateParams', '$state','$rootScope','$timeout','NgMap'];
 
-    function menuCtrl($scope, $stateParams, $state,$rootScope) {
+    function menuCtrl($scope, $stateParams, $state,$rootScope,$timeout,NgMap) {
         $rootScope.showuser = true;
         console.log('menuCtrl',$rootScope.showuser  );
         $scope.details = {};
@@ -28,5 +28,23 @@
             "Country": "Austria"
         }]
 
+        $scope.initmap = function() {
+            console.log('diri')
+            $timeout(function() {
+                // var vm = this;
+                $scope.coo = '8.4807258,124.64481989999999';
+                NgMap.getMap().then(function(map) {
+                    $scope.showCustomMarker = function(evt) {
+                        map.customMarkers.foo.setVisible(true);
+                        map.customMarkers.foo.setPosition(getPosition());
+                    };
+                    $scope.closeCustomMarker = function(evt) {
+                        this.style.display = 'none';
+                    };
+                });
+            }, 500)
+        };
+
+        $scope.initmap();
     }
 })();

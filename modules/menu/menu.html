@@ -344,7 +344,10 @@
                     </div>
                     <div class="col-md-12" style="margin-bottom: 60px;">
                         <div style="font-size: 22px;margin-bottom: 20px;">Locate us here:</div>
-                        <img src="img/google-maps.png" style="width: 100%;">
+                        <ng-map zoom="20" center="8.4807258,124.64481989999999" id="mapler" on-center-changed="centerCustomMarker()">
+                        <marker position="8.4807258,124.64481989999999" ng-click="showCustomMarker()"></marker>
+                        <!-- <marker position="2600 pennsylvania ave, washington DC" on-click="vm.showCustomMarker()"></marker> -->
+                    </ng-map>
                     </div>
                 </div>
             </div>
