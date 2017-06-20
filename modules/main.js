@@ -13,7 +13,7 @@
 
     angular.module('starter')
         .controller('MainCtrl', MainCtrl);
-
+ 
     MainCtrl.$inject = ['$scope', '$uibModal']
 
     function MainCtrl($scope, $uibModal) {
