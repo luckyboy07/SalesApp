@@ -1125,7 +1125,7 @@ md-steppers-content-wrapper {
 }
 
 md-steppers:not(.md-no-step-content):not(.md-dynamic-height) {
-    min-height: 1100px;
+    min-height: 1030px;
 }
 
 .md-step::after {
