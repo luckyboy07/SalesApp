@@ -2,6 +2,18 @@ body {
     background-color: #EFEFEF !important;
 }
 
+body.md-default-theme,
+body,
+html.md-default-theme,
+html {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #efefef !important;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    cursor: pointer;
+}
+
 .navbar-fixed-top {
     position: absolute !important;
 }
@@ -47,7 +59,17 @@ body {
 .navbar-custom .navbar-brand {
     color: #F26822 !important;
     display: flex !important;
-    font-size: 1.5em !important;
+    font-size: 1.8em !important;
+}
+
+@media (min-width: 768px) {
+    header .intro-text .intro-lead-in {
+        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-style: italic;
+        font-size: 37px !important;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
 }
 
 .headermenu {
@@ -62,6 +84,7 @@ body {
     border-radius: 2px;
     margin-top: -8px;
     outline: 0;
+    font-weight: 500;
 }
 
 header .intro-text .intro-lead-in {
@@ -162,7 +185,7 @@ h6 {
 }
 
 .dlapp {
-    background-image: url(../img/dlApp.png);
+    background-image: url(../img/seconBack.png);
     height: 510px;
     margin-top: 50px;
     background-size: 100% 510px;
@@ -535,6 +558,7 @@ hr {
     border-radius: 2px;
     margin-top: 15px;
     box-shadow: 1px 1px 2px 0px #ccc;
+    text-align: left;
 }
 
 .customCLicker .list-group-item {
@@ -575,6 +599,7 @@ hr {
     margin-bottom: 7px;
     text-transform: none;
     margin-top: 0;
+    font-weight: 500 !important;
 }
 
 #customCArd .content small {
@@ -963,6 +988,7 @@ hr {
     border: 0;
     // box-shadow: 1px 1px 1px 1px #d6d4d4;
     font-size: 9px;
+    height: 26px !important;
 }
 
 .ListModalInputIncrem {

@@ -27,6 +27,25 @@
             "Name": "Ernst H",
             "Country": "Austria"
         }]
+        $scope.Menus = [{
+            "Name": "Meaty Cheese Burger",
+            "image": "burgerList.png"
+        }, {
+            "Name": "Meaty Cheese Burger",
+            "image": "burgerList.png"
+        }, {
+            "Name": "Meaty Cheese Burger",
+            "image": "burgerList.png"
+        }, {
+            "Name": "Meaty Cheese Burger",
+            "image": "burgerList.png"
+        }, {
+            "Name": "Meaty Cheese Burger",
+            "image": "burgerList.png"
+        }, {
+            "Name": "Meaty Cheese Burger",
+            "image": "burgerList.png"
+        }];
 
         $scope.initmap = function() {
             console.log('diri')

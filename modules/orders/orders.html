@@ -93,11 +93,11 @@
             <!-- LISTVIEW -->
             <div ng-show="listview">
                 <ul class="list-group" style="padding-top: 10px;padding-bottom: 10px;background: #fff;">
-                    <li class="list-group-item" ng-repeat="items in lists" style="display: flex;padding: 20px 30px;">
+                    <li class="list-group-item" ng-repeat="storesies in storesList" style="display: flex;padding: 20px 30px;">
                         <!-- <img src="/img/Image 401.png"> -->
-                        <div class="lister" style="background-image: url(img/Image401.png);"></div>
+                        <div ><img ng-src="../img/store/{{storesies.image}}" style="width: 130px;"></div>
                         <div style="padding: 10px 30px;">
-                            <div style="font-size: 22px;">McDonald's - Divisoriassss</div>
+                            <div style="font-size: 22px;font-weight: 500;color: #3c3c3c;">{{storesies.Name}}</div>
                             <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
                                 <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
                                     <div class="div">Fast Food</div>
@@ -130,9 +130,9 @@
             <!-- GRIDVIEW -->
             <div ng-show="gridview">
                 <div class="row">
-                    <div class="col-md-4" ng-repeat="items in lists" ui-sref="main.menu">
+                    <div class="col-md-4" ng-repeat="store in stores" ui-sref="main.menu">
                         <div class="thumbnail" style="padding: 0">
-                            <img src="img/Image401.png" style="width:100%">
+                            <img ng-src="../img/store/{{store.image}}" style="width:100%">
                             <div id="GridScheduler">
                                 Opens @
                                 <br> 8:30AM - 10:30PM
@@ -148,7 +148,7 @@
                                 </ul>
                             </div>
                             <div class="caption">
-                                <div style="font-size: 22px;">McDonald's - Divisoriassss</div>
+                                <div style="font-size: 22px;">{{store.Name}}</div>
                                 <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
                                     <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
                                         <div class="div">Fast Food</div>
@@ -171,13 +171,13 @@
             <div ng-show="mapview">
                 <div class="col-md-5" style="padding-right: 0;">
                     <ul class="list-group">
-                        <li class="list-group-item" ng-repeat="items in lists" style="display: flex;padding: 20px 15px;border: 1px solid #ccc !important;">
+                        <li class="list-group-item" ng-repeat="storesies in storesList" style="display: flex;padding: 20px 15px;border: 1px solid #ccc !important;">
                             <div id="mapviewPlaceholderHolder"><img src="img/placeholder.png" style="width: 40px">
                                 <div id="mapviewPlaceholder">A</div>
                             </div>
-                            <div class="lister" style="background-image: url(img/Image401.png);height: 95px;width: 110px;background-size: 190px 95px;background-position-x: -45px;"></div>
+                            <div><img ng-src="../img/store/{{storesies.image}}" style="width: 100px;"></div>
                             <div style="padding: 0px 30px;margin-top: -6px;">
-                                <div style="font-size: 18px;">McDonald's - Divisoriassss</div>
+                                <div style="font-size: 18px;">{{storesies.Name}}</div>
                                 <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
                                     <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 15px;height: 16px;">
                                         <div class="div">Fast Food</div>

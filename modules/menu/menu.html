@@ -126,10 +126,10 @@
                         </div>
                         <h3 style="text-transform: none;margin-bottom: 20px;">Burger</h3>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6" ng-repeat="menu in Menus">
                                 <div id="customCArd" ng-click="openMenuModal()">
                                     <div>
-                                        <img src="img/burger.png" style="width: 110px;">
+                                        <img ng-src="../img/store/{{menu.image}}" style="width: 110px;">
                                     </div>
                                     <div class="content">
                                         <h3>Meaty Cheese Burger</h3>
@@ -138,7 +138,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                           <!--  <div class="col-md-6">
                                 <div id="customCArd">
                                     <div>
                                         <img src="img/burger.png" style="width: 110px;">
@@ -161,7 +161,7 @@
                                         <small>Some food description Some food description Some food description Some food description</small>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
