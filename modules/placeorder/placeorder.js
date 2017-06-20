@@ -4,10 +4,12 @@
     angular.module('starter')
         .controller('placeOrderCtrl', placeOrderCtrl);
 
-    placeOrderCtrl.$inject = ['$scope', '$stateParams', '$state', '$q','$timeout','NgMap'];
+    placeOrderCtrl.$inject = ['$scope', '$stateParams', '$state', '$q', '$timeout', 'NgMap', '$location', '$anchorScroll'];
 
-    function placeOrderCtrl($scope, $stateParams, $state, $q,$timeout,NgMap) {
+    function placeOrderCtrl($scope, $stateParams, $state, $q, $timeout, NgMap, $location, $anchorScroll) {
         // $scope.$mdStepper = $mdStepper;
+        $anchorScroll();
+
         console.log('placeOrderCtrl');
         $scope.details = {};
         $scope.lists = [1, 2, 3, 4, 5, 6];
@@ -26,6 +28,9 @@
         $scope.selectedTimeAsNumber = 37840000; // (formatted: 6:30 PM)
         $scope.sharedDate = "2017-06-19T01:00:00.773Z"; // (formatted: 6/19/17 9:00 AM)
 
+        $scope.proceedPayment = function(){
+            $anchorScroll();
+        }
         $scope.initmap = function() {
             console.log('diri')
             $timeout(function() {
@@ -43,5 +48,6 @@
             }, 500)
         };
         $scope.initmap();
+
     }
 })();
