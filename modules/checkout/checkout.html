@@ -1,117 +1,173 @@
-<nav id="mainNav" class="navbar navbar-default navbar-custom" style="background: #fff;padding: 10px 10px 3px 10px;margin-bottom: 0;">
-    <div class="container" ng-init="gridview = true; listview = false; mapview = false;">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><img class="logoer" src="img/Group 10.png"> PickDish</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll headermenu" ng-click="openLoginModal()" style="color: #f26822;margin-right: 15px;">Login</a>
-                </li>
-                <li>
-                    <a class="page-scroll headermenu" ng-click="openSignupModal()">
-                        <button class="signUpbtn">Signup</button>
-                    </a>
-                </li>
-                <li>
-                    <a class="page-scroll headermenu">
-                        <img class="basket2" src="img/shopping-basket.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
+<div id="subHeader">
+    <div class="container">
+        Checkout
     </div>
-</nav>
-<div style="font-size:25px; background:#FFF; padding-left:55px;">
-    Checkout
 </div>
-<div class="container">
-    <div style="padding:20px">
-        <i class="glyphicon glyphicon-arrow-left"></i>
-    </div>
-    <div class="col-md-12">
-        <div class="col-md-6">
-            <li class="list-group-item" style="display: flex;padding: 20px 30px;">
-                <!-- <img src="/img/Image 401.png"> -->
-                <div class="lister" style="background-image: url(../img/Mcdonald.png);"></div>
-                <div style="padding: 10px 30px;">
-                    <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
-                    <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
-                        <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
-                            <div class="div">Fast Food</div>
-                        </li>
-                        <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
-                            <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="list-group-item" style="display: flex;padding: 20px 30px;">
-                <img src="img/Image401.png" style="width:70px; height:70px; ">
-                <ul style="list-style:none; padding-left:20px">
-                    <li style="display: flex;">
-                        <div>Meaty Cheese Burger</div>
-                        <i class="glyphicon glyphicon-trash" style="margin-left:230px"></i>
-                    </li>
-                    <li>
-                        <div>$ 8.00</div>
-                    </li>
-                </ul>
-            </li>
-            <div style="margin-top: 5px; padding-left:30px; background:#FFF; height:65px">
-                Add delivery notes
+<section>
+    <div class="container">
+        <div class="row">
+            <div id="backpager" ui-sref="main.menu">
+                <i class="glyphicon glyphicon-arrow-left"></i>
             </div>
-            <ul class="list-group-item" style="margin-top:5px; padding-left:30px;">
-                <li style="display: flex;">
-                    <div class="col-md-12">
-                        <div class="col-md-10">
-                            Sub Total:
-                        </div>
-                        <div class="col-md-2">
-                            $24.00
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="boX-shadower" style="padding: 30px 40px;background: #fff;margin-bottom: 50px;">
+                            <li class="list-group-item" style="display: flex;padding: 20px 30px;">
+                                <!-- <img src="/img/Image 401.png"> -->
+                                <div class="lister" style="background-image: url(../img/Mcdonald.png);background-size: 150px 130px;background-position-x: -10px;width: 190px;"></div>
+                                <div style="padding: 10px 30px;">
+                                    <div style="font-size: 22px; color:#F26822;">McDonald's - Divisoria</div>
+                                    <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
+                                        <li style="display: flex;margin-bottom: 10px;"><img src="img/spoon-and-fork-crossed.png" style="width: 17px;height: 18px;">
+                                            <div class="div">Fast Food</div>
+                                        </li>
+                                        <li style="display: flex;"><i class="glyphicon glyphicon-map-marker" style="font-size: 16px;color: #7a7977;"></i>
+                                            <div class="div">Don Apolinar Velez cor. A.Mabini St. Cagayan de Oro City</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                <div id="ListModal">
+                                    <img src="img/miniburger.png">
+                                    <div style="padding-left: 65px;">
+                                        <div class="title">Meaty Chee</div>
+                                        <div class="price">$ 20.00</div>
+                                        <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                            <div class="input-group" style="width: 75%;">
+                                                <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                </button>
+                                                </span>
+                                                <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floater">
+                                        <i class="glyphicon glyphicon-trash"></i>
+                                        <div>$ 40.00</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                <div id="ListModal">
+                                    <img src="img/miniburger.png">
+                                    <div style="padding-left: 65px;">
+                                        <div class="title">Meaty Chee</div>
+                                        <div class="price">$ 20.00</div>
+                                        <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                            <div class="input-group" style="width: 75%;">
+                                                <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                </button>
+                                                </span>
+                                                <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floater">
+                                        <i class="glyphicon glyphicon-trash"></i>
+                                        <div>$ 40.00</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item" style="display: flex;padding: 0px 15px;">
+                                <div id="ListModal">
+                                    <img src="img/miniburger.png">
+                                    <div style="padding-left: 65px;">
+                                        <div class="title">Meaty Chee</div>
+                                        <div class="price">$ 20.00</div>
+                                        <div class="action col-md-4" style="padding: 0;margin-top: 5px;">
+                                            <div class="input-group" style="width: 75%;">
+                                                <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number ListModalIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                                </button>
+                                                </span>
+                                                <input type="text" id="quantity" name="quantity" class="form-control input-number ListModalInputIncrem" value="10" min="1" max="100">
+                                                <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number ListModalIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floater">
+                                        <i class="glyphicon glyphicon-trash"></i>
+                                        <div>$ 40.00</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <hr style="margin-left: 15px;margin-right: 15px;margin-bottom: 10px;">
+                            <li class="list-group-item">
+                                <textarea id="textMedia" class="form-control" rows="4" placeholder="Add delivery notes"></textarea>
+                            </li>
+                            <div style="padding: 10px 15px">
+                                <div class="row" id="customTable">
+                                    <div class="col-md-6">
+                                        <div>Sub Total</div>
+                                        <div>Tax</div>
+                                        <div>Delivery Fee</div>
+                                    </div>
+                                    <div class="col-md-6" style="text-align: right;">
+                                        <div>$24.00</div>
+                                        <div>$0.00</div>
+                                        <div>$0.00</div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <hr>
+                                        <h4>Total <span style="float:right;">$ 28.00</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding: 10px 15px;">
+                                <button id="pickDishBtn" class="login FullWidth" style="margin-top: 5px;" ui-sref="main.placeorder">Proceed</button>
+                            </div>
                         </div>
                     </div>
-                </li>
-                <li style="display: flex;">
-                    <div class="col-md-12">
-                        <div class="col-md-10">
-                            Tax:
-                        </div>
-                        <div class="col-md-2">
-                            $50.00
-                        </div>
+                    <div class="col-md-6">
+                        <ng-map zoom="20" center="8.4807258,124.64481989999999" class="boX-shadower" style="height:879px" on-center-changed="centerCustomMarker()">
+                            <marker position="8.4807258,124.64481989999999" on-click="vm.showCustomMarker()"></marker>
+                            <!-- <marker position="2600 pennsylvania ave, washington DC" on-click="vm.showCustomMarker()"></marker> -->
+                            <!--  <custom-marker id="foo" position="10 pennsylvania ave, washington DC" on-click="vm.closeCustomMarker()">
+                    <div>
+                        <img width="64" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Donald_Trump_August_19%2C_2015_%28cropped%29.jpg/220px-Donald_Trump_August_19%2C_2015_%28cropped%29.jpg" align="left" /> Hi, How Are You?
+                        <br/> My Name is Trump, and people call me as Mr. President.
+                        <br/> We live in this house.
+                        <br/>
+                        <br/>
+                        <img width="300" src="http://cdn.cstatic.net/images/gridfs/53b42fd3f92ea17d970280b4/Screen%20Shot%202014-07-02%20at%2012.07.54%20PM.png" />
+                        <br/> If you want to visit us, please click <a href="https://www.whitehouse.gov">here</a>
+                </custom-marker> -->
+                        </ng-map>
                     </div>
-                </li>
-                <li style="display: flex;">                    
-                    <div class="col-md-12">
-                        <div class="col-md-10">
-                            Delivery Fee:
-                        </div>
-                        <div class="col-md-2">
-                            $4:00
-                        </div>
-                    </div>
-                </li>
-                <li style="display: flex;">                    
-                    <div class="col-md-12">
-                        <div class="col-md-10">
-                            Total:
-                        </div>
-                        <div class="col-md-2">
-                            $28:00
-                        </div>
-                    </div>
-                </li>
-            </ul>          
-            <button type="button" class="btn btn-warning">Warning</button>
-        </div>
-        <div class="col-md-6">
-            MAP
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+<style type="text/css">
+.btn-pick {
+    color: #fff;
+    background-color: #fb6430;
+    border-color: #eea236;
+}
+
+.navbar-custom {
+    background-color: white;
+}
+</style>

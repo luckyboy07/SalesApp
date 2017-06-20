@@ -1,69 +1,9 @@
-<nav id="mainNav" class="navbar navbar-default navbar-custom" style="background: #fff;padding: 0px;margin-bottom: 0;">
-    <div class="container" ng-init="gridview = true; listview = false; mapview = false;">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top" style="margin-top: 10px;"><img class="logoer" src="img/Group 10.png"> PickDish</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <!--  <li>
-                    <a class="page-scroll headermenu" ng-click="openLoginModal()" style="color: #f26822;margin-right: 15px;">Login</a>
-                </li>
-                <li>
-                    <a class="page-scroll headermenu" ng-click="openSignupModal()">
-                        <button class="signUpbtn">Signup</button>
-                    </a>
-                </li> -->
-                <!-- <li>
-                    <div class="dropdown">
-                        <img class="dropdown-toggle" data-toggle="dropdown" src="img/man.png">
-                        <span class="caret" style="float: right;margin-top: 10px;"></span>
-                        <ul class="dropdown-menu" style="margin-left: 51px;width: 190px;">
-                            <li><a style="color: #000">A-Z</a></li>
-                            <li><a style="color: #000">Z-A</a></li>
-                        </ul>
-                    </div>
-                </li> -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" style="color: #F26822;">
-                        <!--  <span class="glyphicon glyphicon-user"></span>&nbsp; -->
-                        <strong id="profiler">Nombre</strong>
-                        <img src="img/man.png" style="width: 41px;margin-top: -5px;">
-                        <span id="profiler" class="glyphicon glyphicon-chevron-down"></span>
-                    </a>
-                    <ul class="dropdown-menu" style="min-width: 151px !important;">
-                        <li>
-                            My Favorites
-                        </li>
-                        <li>
-                            My Orders
-                        </li>
-                        <li>
-                            My Account
-                        </li>
-                        <li>
-                            Logout
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="page-scroll headermenu">
-                        <img class="basket2" src="img/shopping-basket.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
 <div>
     <img src="img/Group4184.png" style="width: 100%;height: 340px;">
 </div>
 <div class="container">
-    <div id="subHeaderHolder">
+    <div id="subHeaderHolder" style="width: 1235px !important;">
         <div id="opener">
             <div>Opens @</div>
             <small>8:30AM - 10:30PM</small>
@@ -186,7 +126,19 @@
                         </div>
                         <h3 style="text-transform: none;margin-bottom: 20px;">Burger</h3>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6" ng-repeat="menu in Menus">
+                                <div id="customCArd" ng-click="openMenuModal()">
+                                    <div>
+                                        <img ng-src="../img/store/{{menu.image}}" style="width: 110px;">
+                                    </div>
+                                    <div class="content">
+                                        <h3>Meaty Cheese Burger</h3>
+                                        <div style="margin-bottom: 7px;"><span>$ 8.00</span></div>
+                                        <small>Some food description Some food description Some food description Some food description</small>
+                                    </div>
+                                </div>
+                            </div>
+                           <!--  <div class="col-md-6">
                                 <div id="customCArd">
                                     <div>
                                         <img src="img/burger.png" style="width: 110px;">
@@ -209,24 +161,12 @@
                                         <small>Some food description Some food description Some food description Some food description</small>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div id="customCArd">
-                                    <div>
-                                        <img src="img/burger.png" style="width: 110px;">
-                                    </div>
-                                    <div class="content">
-                                        <h3>Meaty Cheese Burger</h3>
-                                        <div style="margin-bottom: 7px;"><span>$ 8.00</span></div>
-                                        <small>Some food description Some food description Some food description Some food description</small>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div style="float: right;width: 428px;margin-bottom: 20px;">
+                    <div style="float: right;width: 35.8%;margin-bottom: 20px;">
                         <ul class="pagination">
                             <li><a>Previous</a></li>
                             <li><a>1</a></li>
@@ -346,7 +286,10 @@
                     </div>
                     <div class="col-md-12" style="margin-bottom: 60px;">
                         <div style="font-size: 22px;margin-bottom: 20px;">Locate us here:</div>
-                        <img src="img/google-maps.png" style="width: 100%;">
+                        <ng-map zoom="20" center="8.4807258,124.64481989999999" id="mapler" on-center-changed="centerCustomMarker()">
+                        <marker position="8.4807258,124.64481989999999" ng-click="showCustomMarker()"></marker>
+                        <!-- <marker position="2600 pennsylvania ave, washington DC" on-click="vm.showCustomMarker()"></marker> -->
+                    </ng-map>
                     </div>
                 </div>
             </div>
@@ -404,7 +347,7 @@
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <div id="ExtraBtn">
+                        <div id="ExtraBtn" ng-click="openLoginModal()">
                             Add Review
                             <br>
                             <small style="font-size: 15px;">Login | Signup</small>
@@ -472,7 +415,7 @@
                             </li>
                         </ul>
                         <div class="col-md-12">
-                            <div style="margin: auto;width: 428px;margin-bottom: 20px;">
+                            <div style="margin: auto;width: 35.8%;margin-bottom: 20px;">
                                 <ul class="pagination">
                                     <li><a>Previous</a></li>
                                     <li><a>1</a></li>

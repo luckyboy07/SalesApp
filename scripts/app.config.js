@@ -9,19 +9,19 @@
                 $locationProvider.hashPrefix("");
 
 
-                $urlRouterProvider.otherwise('/main/orders');
+                $urlRouterProvider.otherwise('/home');
 
                 $stateProvider
 
-                    
                     .state('main', {
                         url: '/main',
                         templateUrl: 'modules/main.html',
-                        controller:'MainCtrl'
+                        controller: 'MainCtrl'
                     })
-                    .state('main.home', {
+                    .state('home', {
                         url: '/home',
-                        templateUrl: 'modules/home/home.html'
+                        templateUrl: 'modules/home/home.html',
+                        controller: 'homeCtrl'
                     })
                     .state('main.restolist', {
                         url: '/restolist',
@@ -52,6 +52,21 @@
                         url: '/menu',
                         templateUrl: 'modules/menu/menu.html',
                         controller: 'menuCtrl'
+                    })
+                    .state('main.delivery', {
+                        url: '/delivery',
+                        templateUrl: 'modules/delivery/delivery.html',
+                        controller: 'deliveryCtrl'
+                    })
+                    .state('main.placeorder', {
+                        url: '/placeorder',
+                        templateUrl: 'modules/placeorder/placeorder.html',
+                        controller: 'placeOrderCtrl'
+                    })
+                    .state('main.proof', {
+                        url: '/pop',
+                        templateUrl: 'modules/proof/proof.html',
+                        controller: 'proofCtrl'
                     });
                 RestangularProvider.setBaseUrl(API_URL + API_VERSION);
 

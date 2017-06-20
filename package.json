@@ -15,5 +15,9 @@
     "gulp-usemin": "^0.3.7",
     "gulp-wrap": "^0.3.0",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "angular-qrcode": "^7.2.0",
+    "qrcode-generator": "^1.2.0"
   }
 }

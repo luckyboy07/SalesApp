@@ -1,0 +1,42 @@
+<div class="modal-body">
+    <i class="glyphicon glyphicon-remove" ng-click="cancel()" style="float: right;
+    position: absolute;
+    right: 10px;
+    top: 15px;"></i>
+    <div id="customCArd" style="box-shadow: none;margin-bottom: 15px;">
+        <div>
+            <img src="img/burger.png" style="width: 140px;height: 145px">
+        </div>
+        <div class="content" style="font-size: 114%;">
+            <h3 style="font-size: 21px;margin-top: -17px;">Meaty Cheese Burger</h3>
+            <div style="margin-bottom: 7px;"><span>$ 8.00</span></div>
+            <small>Some food description Some food description Some food description Some food description</small>
+        </div>
+    </div>
+    <div style="font-size: 17px;line-height: 40px;">
+        Special Instructions
+        <textarea class="form-control" rows="4" placeholder="Add notes (extra sauce, no sugar)" style="background: #EFEFEF;border-color: #EFEFEF;box-shadow: none !important;"></textarea>
+    </div>
+    <div class="row">
+        <div class="col-lg-4" style="margin-top: 20px;">
+            <div class="input-group">
+                <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number pickDishIncremBtn"  data-type="minus" data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                </span>
+                <input type="text" id="quantity" name="quantity" class="form-control input-number pickDishInputIncrem" value="10" min="1" max="100">
+                <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number pickDishIncremBtn" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div style="padding-top: 20px;margin-left: 20px;">
+                <button id="pickDishBtn" class="FullWidth"><img src="img/shopping-basket-white.png">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

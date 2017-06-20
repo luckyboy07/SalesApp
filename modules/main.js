@@ -13,12 +13,11 @@
 
     angular.module('starter')
         .controller('MainCtrl', MainCtrl);
- 
-    MainCtrl.$inject = ['$scope', '$uibModal']
 
-    function MainCtrl($scope, $uibModal) {
+    MainCtrl.$inject = ['$scope', '$uibModal', '$rootScope', '$state']
 
-
+    function MainCtrl($scope, $uibModal, $rootScope, $state) {
+        $rootScope.showuser = true;
         $scope.dynamicPopover = {
             templateUrl: 'myPopoverTemplate.html',
             backdrop: 'static',
@@ -27,16 +26,19 @@
         $scope.openLoginModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: 'modules/modals/loginModal.html',
-                scope: $scope
+                scope: $scope,
+                size: 'lg'
             });
             $scope.cancel = function() {
+                $rootScope.showuser = true;
                 modalInstance.dismiss('cancel');
             }
         }
         $scope.openSignupModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: 'modules/modals/signupModal.html',
-                scope: $scope
+                scope: $scope,
+                size: 'lg'
             });
             $scope.cancel = function() {
                 modalInstance.dismiss('cancel');
@@ -47,6 +49,25 @@
             var modalInstance = $uibModal.open({
                 templateUrl: 'modules/modals/myordersModal.html',
                 scope: $scope
+            });
+            $scope.cancel = function() {
+                modalInstance.dismiss('cancel');
+            }
+        }
+        $scope.openMenuModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'modules/modals/menuModal.html',
+                scope: $scope
+            });
+            $scope.cancel = function() {
+                modalInstance.dismiss('cancel');
+            }
+        }
+        $scope.cartModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'modules/modals/cartModal.html',
+                scope: $scope,
+                size: 'lg'
             });
             $scope.cancel = function() {
                 modalInstance.dismiss('cancel');
