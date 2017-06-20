@@ -1,6 +1,11 @@
 <li class="list-group-item" style="display: flex;padding: 30px 30px 15px;">
+    <i class="glyphicon glyphicon-remove" ng-click="cancel()" style="float: right;
+    position: absolute;
+    right: 10px;
+    top: 15px;"></i>
     <!-- <img src="/img/Image 401.png"> -->
-    <div class="lister" style="background-image: url(../img/Image401.png);height: 125px;background-size: 214px 125px;background-position-x: -50px;"></div>
+    <div class="lister" style="background-image: url(../img/Mcdonald.png);height: 125px;background-size: 180px 125px;
+    background-position-x: -25px;"></div>
     <div style="padding: 5px 20px;">
         <div style="font-size: 18px; color:#F26822">McDonald's - Divisoria</div>
         <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
@@ -25,12 +30,62 @@
     <div class="row">
         <div class=col-md-12>
             <div style="font-size: 17px;color: #f36e3f;">Order List
-                <br>
-                <small style="color: #3a3a3a;font-size: 12px;">Ordered: May 26, 2017 : 1:30 PM</small></div>
-            <div class="col-md-6">
+            </div>
+            <div class="col-md-6" style="padding-left: 0">
+                <small style="color: #3a3a3a;font-size: 12px;">Ordered: May 26, 2017 : 1:30 PM</small>
+                <ul style="list-style: none;padding-left: 0;margin-top: 20px;">
+                    <li style="margin-bottom: 20px;">
+                        <div style="font-size: 12px;font-weight: 500;">Meaty Cheese Burger <span style="float: right;color: #F26822;">$ 16.00</span></div>
+                        <img src="../img/burGer2.png" style="width: 50px;margin-top: 5px;"><span style="color: #F26822;font-size: 12px;margin-left: 10px;">$ 8.00 x2</span>
+                    </li>
+                    <li style="margin-bottom: 20px;">
+                        <div style="font-size: 12px;font-weight: 500;">Meaty Cheese Burger <span style="float: right;color: #F26822;">$ 16.00</span></div>
+                        <img src="../img/burGer2.png" style="width: 50px;margin-top: 5px;"><span style="color: #F26822;font-size: 12px;margin-left: 10px;">$ 8.00 x2</span>
+                    </li>
+                    <li style="margin-bottom: 20px;">
+                        <div style="font-size: 12px;font-weight: 500;">Meaty Cheese Burger <span style="float: right;color: #F26822;">$ 16.00</span></div>
+                        <img src="../img/burGer2.png" style="width: 50px;margin-top: 5px;"><span style="color: #F26822;font-size: 12px;margin-left: 10px;">$ 8.00 x2</span>
+                    </li>
+                    <li style="margin-bottom: 20px;">
+                        <div style="font-size: 12px;font-weight: 500;">Meaty Cheese Burger <span style="float: right;color: #F26822;">$ 16.00</span></div>
+                        <img src="../img/burGer2.png" style="width: 50px;margin-top: 5px;"><span style="color: #F26822;font-size: 12px;margin-left: 10px;">$ 8.00 x2</span>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-6">
-                bb
+                <div id="ModalListedProd">
+                    <div>
+                        <div style="font-size: 16px;">Address</div>
+                        <div style="font-size: 12px;color: #616161;margin-bottom: 15px;">DELIVERING TO Level 4, Pioneer House CDO, Don Apolinar Velez cor.A.Mabini St. Cagayan de Oro City, PH, 9000</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 16px;">Schedule</div>
+                        <div style="font-size: 12px;color: #616161;margin-bottom: 15px;">
+                            <i class="glyphicon glyphicon-calendar"></i> Tue, May 30, 2017
+                            <span style="float: right"><i class="glyphicon glyphicon-time"></i> 2:00:00 PM</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: 16px;">Delivery Notes</div>
+                        <p style="font-size: 12px;color: #616161;margin-bottom: 15px;">Please remove onions, add extra sauce. Please br on time.</p>
+                    </div>
+                    <div class="row" id="customTable">
+                        <div class="col-md-6">
+                            <div>Sub Total</div>
+                            <div>Tax</div>
+                            <div>Delivery Fee</div>
+                        </div>
+                        <div class="col-md-6" style="text-align: right;">
+                            <div>$24.00</div>
+                            <div>$0.00</div>
+                            <div>$0.00</div>
+                        </div>
+                        <div class="col-md-12">
+                            <hr>
+                            <h4>Total <span style="float:right;">$ 28.00</span></h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

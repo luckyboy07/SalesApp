@@ -21,55 +21,59 @@
         </div>
     </div>
     <div class="fixbotttomsub">
-        <div class="row" style="display: flex;width: 100%;margin: 0;">
-            <div class="btn-group" style="width: 295px;">
-                <button type="button" class="btn btn-warning active"><img src="img/delivery-motorbike copy.png" style="width: 22px;margin-top: -3px;"> Delivery</button>
-                <button type="button" class="btn btn-warning"><img src="img/shopping-bag.png" style="width: 16px;margin-top: -5px;"> Pickup</button>
-            </div>
-            <div style="padding: 0 20px;display: flex;width: 70%">
-                <div style="width: 90%;display: flex;margin: auto;">
-                    <i class="glyphicon glyphicon-search searchIcon"></i>
-                    <input type="text" class="form-control searcherr" placeholder="Street address, city, suburb, postcode" style="height: 42px;">
-                    <button class="searchBtn" style="color: #fff">Find Food</button>
+        <div class="container" style="padding: 0;">
+            <div class="row" style="display: flex;width: 100%;margin: 0;">
+                <div class="btn-group" style="width: 295px;">
+                    <button type="button" class="btn btn-warning active"><img src="img/delivery-motorbike copy.png" style="width: 22px;margin-top: -3px;"> Delivery</button>
+                    <button type="button" class="btn btn-warning"><img src="img/shopping-bag.png" style="width: 16px;margin-top: -5px;"> Pickup</button>
                 </div>
-            </div>
-            <div class="btn-group" style="width: 290px;margin-right: -35px;">
-                <button ng-class="{'active':gridview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="gridview = true; listview = false; mapview = false;initmap()">
-                    <i class="glyphicon glyphicon-th" style="font-size: 22px;"></i>
-                </button>
-                <button ng-class="{'active':listview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="listview = true; gridview = false; mapview = false;">
-                    <i class="glyphicon glyphicon-menu-hamburger" style="font-size: 22px;"></i>
-                </button>
-                <button ng-class="{'active':mapview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="mapview = true; gridview = false; listview = false;">
-                    <i class="glyphicon glyphicon-map-marker" style="font-size: 22px;"></i>
-                </button>
+                <div style="padding: 0 20px;display: flex;width: 70%">
+                    <div style="width: 90%;display: flex;margin: auto;">
+                        <i class="glyphicon glyphicon-search searchIcon"></i>
+                        <input type="text" class="form-control searcherr" placeholder="Street address, city, suburb, postcode" style="height: 42px;">
+                        <button class="searchBtn" style="color: #fff">Find Food</button>
+                    </div>
+                </div>
+                <div class="btn-group" style="width: 290px;margin-right: -35px;">
+                    <button ng-class="{'active':gridview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="gridview = true; listview = false; mapview = false;initmap()">
+                        <i class="glyphicon glyphicon-th" style="font-size: 22px;"></i>
+                    </button>
+                    <button ng-class="{'active':listview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="listview = true; gridview = false; mapview = false;">
+                        <i class="glyphicon glyphicon-menu-hamburger" style="font-size: 22px;"></i>
+                    </button>
+                    <button ng-class="{'active':mapview == true}" type="button" class="btn btn-warning" style="padding: 7px 25px;" ng-click="mapview = true; gridview = false; listview = false;">
+                        <i class="glyphicon glyphicon-map-marker" style="font-size: 22px;"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <section id="portfolio" class="bg-light-gray" ng-if="gridview || listview || mapview">
     <div class="suber">
-        <div style="display: flex">
-            <div class="dropdown">
-                Sort By
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="height: 40px;width: 190px;text-align: left;color: #F26822;">
-                    A-Z
-                    <span class="caret" style="float: right;margin-top: 10px;"></span></button>
-                <ul class="dropdown-menu" style="margin-left: 51px;width: 190px;">
-                    <li><a href="#">A-Z</a></li>
-                    <li><a href="#">Z-A</a></li>
-                </ul>
-            </div>
-            <div class="dropdown" style="margin-left: 55px;">
-                Category
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="height: 40px;width: 190px;text-align: left;color: #F26822;">
-                    Pizza
-                    <span class="caret" style="float: right;margin-top: 10px;"></span></button>
-                <ul class="dropdown-menu" style="margin-left: 61px;width: 190px;">
-                    <li><a href="#">Pizza</a></li>
-                    <li><a href="#">Pizza2</a></li>
-                    <li><a href="#">Pizza3</a></li>
-                </ul>
+        <div class="container" style="padding: 0">
+            <div style="display: flex">
+                <div class="dropdown">
+                    Sort By
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="height: 40px;width: 190px;text-align: left;color: #F26822;">
+                        A-Z
+                        <span class="caret" style="float: right;margin-top: 10px;"></span></button>
+                    <ul class="dropdown-menu" style="margin-left: 51px;width: 190px;">
+                        <li><a href="#">A-Z</a></li>
+                        <li><a href="#">Z-A</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown" style="margin-left: 55px;">
+                    Category
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="height: 40px;width: 190px;text-align: left;color: #F26822;">
+                        Pizza
+                        <span class="caret" style="float: right;margin-top: 10px;"></span></button>
+                    <ul class="dropdown-menu" style="margin-left: 61px;width: 190px;">
+                        <li><a href="#">Pizza</a></li>
+                        <li><a href="#">Pizza2</a></li>
+                        <li><a href="#">Pizza3</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -172,7 +176,7 @@
                                 <div id="mapviewPlaceholder">A</div>
                             </div>
                             <div class="lister" style="background-image: url(img/Image401.png);height: 95px;width: 110px;background-size: 190px 95px;background-position-x: -45px;"></div>
-                            <div style="padding: 0px 30px;margin-top: -6px;" >
+                            <div style="padding: 0px 30px;margin-top: -6px;">
                                 <div style="font-size: 18px;">McDonald's - Divisoriassss</div>
                                 <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
                                     <li style="display: flex;"><img src="img/spoon-and-fork-crossed.png" style="width: 15px;height: 16px;">

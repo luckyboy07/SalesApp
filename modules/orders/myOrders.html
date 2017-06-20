@@ -1,5 +1,7 @@
 <div id="subHeader" ng-init="profile = true;">
-    My Orders
+    <div class="container">
+        My Orders
+    </div>
 </div>
 <div class="container">
     <div class="row">
@@ -7,7 +9,7 @@
             <ul class="list-group" style="padding-top: 10px;padding-bottom: 10px;background: #fff;outline: 0;" ng-click="openMyordersModal()">
                 <li class="list-group-item" ng-repeat="items in lists" style="display: flex;padding: 20px 30px;">
                     <!-- <img src="/img/Image 401.png"> -->
-                    <div class="lister" style="background-image: url(../img/Image401.png);background-size: 217px 130px;background-position-x: -50px;"></div>
+                    <div class="lister" style="background-image: url(../img/Mcdonald.png);background-size: 180px 145px;background-position-x: -25px;"></div>
                     <div style="padding: 10px 30px;">
                         <div style="font-size: 22px;">McDonald's - Divisoria</div>
                         <ul class="" style="list-style: none;padding-left: 0;margin-top: 10px;">
@@ -20,15 +22,6 @@
                         </ul>
                     </div>
                     <div class="listerRight">
-                        <!-- <ul class="list-inline" style="margin: 0;float: right;color: #F1DB1D">
-                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                            <li style="padding: 0px;"><i class="glyphicon glyphicon-star"></i></li>
-                            <small style="color: #333333;">(448)</small>
-                        </ul>
-                        <br> -->
                         <div>Ordered: May 26, 2017 : 1:30 PM</div>
                         <div>2 items, $24</div>
                         <div style="color: #FA7751;font-size: 15px;"><i>Pending</i></div>
@@ -38,7 +31,7 @@
             </ul>
         </div>
         <div class="col-md-12">
-            <div style="margin: auto;width: 428px;margin-bottom: 20px;">
+            <div style="margin: auto;width: 35.8%;margin-bottom: 20px;">
                 <ul class="pagination">
                     <li><a>Previous</a></li>
                     <li><a>1</a></li>
@@ -59,5 +52,9 @@
         width: 834px;
         margin: 30px auto;
     }
+}
+
+.navbar-custom {
+    background-color: white;
 }
 </style>

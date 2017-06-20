@@ -1,3 +1,6 @@
+body {
+    background-color: #EFEFEF !important;
+}
 
 .navbar-fixed-top {
     position: absolute !important;
@@ -174,9 +177,9 @@ h6 {
 .textAppDl {
     font-size: 19px;
     text-align: left;
-    padding-left: 150px;
+    padding-left: 20px;
     padding-right: 100px;
-    margin-top: -30px;
+    margin-top: 25px;
 }
 
 .dtext {
@@ -339,8 +342,12 @@ footer {
     position: absolute;
     z-index: 1 !important;
     top: 71px;
-    width: 85%;
+    /* width: 85%; */
     margin-left: 0;
+    margin: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
 }
 
 #subHeaderHolder .contentz {
@@ -943,6 +950,10 @@ hr {
     border-radius: 3px;
 }
 
+.navbar-custom {
+    background-color: white;
+}
+
 .ListModalIncremBtn,
 .ListModalIncremBtn:hover,
 .ListModalIncremBtn:active,
@@ -971,8 +982,8 @@ hr {
 #subHeader {
     font-size: 25px;
     background: #FFF;
-    padding-left: 92px;
-    padding: 20px 92px;
+    /* padding-left: 92px; */
+    padding: 20px 0px;
     border: 1px solid #eaeaea;
     box-shadow: 0px 2px 2px 0px #b7b7b7;
 }
@@ -1288,4 +1299,10 @@ md-steppers:not(.md-no-step-content):not(.md-dynamic-height) {
     width: 90%;
     border-radius: 3px;
     margin-top: 115px;
+}
+
+#ModalListedProd {
+    padding: 15px;
+    background: #EFEFEF;
+    border: 1px solid rgba(149, 152, 154, 0.07);
 }
